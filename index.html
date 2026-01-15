@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <title>Noble Heaven</title>
 
-    <!-- IMPORTANT FOR MOBILE SCALING -->
+    <!-- MOBILE SCALING -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #ffffff;
             color: #000;
             text-align: center;
+
+            /* BACKGROUND IMAGE */
+            background-image: url("background.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         /* HAMBURGER */
@@ -30,11 +36,14 @@
         /* HOME */
         .home {
             padding: 150px 20px 90px;
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(2px);
         }
 
+        /* LOGO (MADE BIGGER) */
         .logo {
-            width: 80%;
-            max-width: 320px;
+            width: 85%;
+            max-width: 360px;
             margin-bottom: 55px;
         }
 
@@ -108,7 +117,7 @@
             background: #999;
         }
 
-        /* MENU OVERLAY (BLUR BACKGROUND) */
+        /* MENU OVERLAY */
         .menu-overlay {
             display: none;
             position: fixed;
