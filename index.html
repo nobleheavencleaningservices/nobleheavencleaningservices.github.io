@@ -8,12 +8,12 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0a1b2a;
-            color: white;
+            background: #ffffff;
+            color: #000;
             text-align: center;
         }
 
-        /* HAMBURGER ICON */
+        /* HAMBURGER */
         .hamburger {
             position: fixed;
             top: 20px;
@@ -21,82 +21,46 @@
             font-size: 28px;
             cursor: pointer;
             z-index: 1000;
-            color: white;
+            color: #000;
         }
 
-        /* HERO SECTION */
-        .hero {
-            padding: 120px 20px;
-            background: linear-gradient(120deg, #003cff, #00b3ff);
+        /* MAIN CONTENT */
+        .home {
+            padding: 120px 20px 60px;
         }
 
-        .button {
+        .logo {
+            max-width: 220px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+            max-width: 300px;
+            margin: 0 auto 40px;
+        }
+
+        /* APPOINTMENT BUTTON */
+        .appointment-btn {
             display: inline-block;
-            padding: 15px 30px;
-            margin-top: 30px;
-            background: white;
-            color: #003cff;
+            padding: 14px 40px;
+            background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
+            color: white;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
-        /* SIDE MENU */
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.7);
-            z-index: 999;
-        }
-
-        .menu-box {
-            width: 85%;
-            max-width: 350px;
-            background: #2b2b2b;
-            color: white;
-            height: 100%;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .menu-box h2 {
-            margin-top: 0;
-            letter-spacing: 2px;
-        }
-
-        .menu-box hr {
-            margin: 15px 0 30px;
-        }
-
-        .menu-link {
-            font-size: 20px;
-            margin: 15px 0;
-            cursor: pointer;
-        }
-
-        .menu-contact {
-            margin-top: 40px;
-            text-align: left;
-        }
-
-        .menu-contact p {
-            margin: 10px 0;
-        }
-
-        .menu-box button {
-            margin-top: 30px;
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 25px;
-            background: #555;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* FORM */
+        /* FORM OVERLAY */
         .form-overlay {
             display: none;
             position: fixed;
@@ -128,7 +92,7 @@
             margin-top: 10px;
             border: none;
             border-radius: 25px;
-            background: #003cff;
+            background: #5a9ed8;
             color: white;
             font-weight: bold;
             cursor: pointer;
@@ -137,22 +101,67 @@
         .form-box .close {
             background: #999;
         }
+
+        /* SIDE MENU */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+        }
+
+        .menu-box {
+            width: 85%;
+            max-width: 350px;
+            background: #2b2b2b;
+            color: white;
+            height: 100%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .menu-link {
+            font-size: 20px;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        .menu-box button {
+            margin-top: 30px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: #555;
+            color: white;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HAMBURGER MENU ICON -->
-<div class="hamburger" onclick="openMenu()" aria-label="Open menu">☰</div>
+<!-- HAMBURGER -->
+<div class="hamburger" onclick="openMenu()">☰</div>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Welcome to Noble Heaven official website</h1>
-    <p>Would you like to schedule an appointment with us?</p>
-    <a class="button" href="#" onclick="openForm()">Get Started</a>
+<!-- HOME -->
+<div class="home">
+    <img src="Untitled197_20260114215046.PNG" alt="Noble Heaven Logo" class="logo">
+
+    <h1>NOBLE HEAVEN</h1>
+
+    <div class="description">
+        Small description of business<br>
+        Small description of business<br>
+        Small description of business<br>
+        Small description of business
+    </div>
+
+    <a href="#" class="appointment-btn" onclick="openForm()">Appointment</a>
 </div>
 
-<!-- APPOINTMENT FORM -->
+<!-- FORM -->
 <div id="appointmentForm" class="form-overlay" onclick="closeForm()">
     <div class="form-box" onclick="event.stopPropagation()">
         <h2>Schedule an Appointment</h2>
@@ -169,21 +178,13 @@
     </div>
 </div>
 
-<!-- SIDE MENU -->
+<!-- MENU -->
 <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
     <div class="menu-box" onclick="event.stopPropagation()">
         <h2>Noble Heaven</h2>
-        <hr>
 
         <p class="menu-link" onclick="closeMenu()">Home</p>
         <p class="menu-link">About Us</p>
-
-        <div class="menu-contact">
-            <p>📷 Instagramusername</p>
-            <p>📘 Facebook username</p>
-            <p>📞 (123) 575-8797</p>
-            <p>✉️ username@gmail.com</p>
-        </div>
 
         <button onclick="closeMenu()">Close</button>
     </div>
