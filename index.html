@@ -1,68 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Noble Heaven</title>
+
     <style>
-    .menu-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    z-index: 999;
-}
-
-.menu-box {
-    width: 85%;
-    max-width: 350px;
-    background: #2b2b2b;
-    color: white;
-    height: 100%;
-    padding: 30px;
-    text-align: center;
-}
-
-.menu-box h2 {
-    margin-top: 0;
-    letter-spacing: 2px;
-}
-
-.menu-box hr {
-    margin: 15px 0 30px;
-}
-
-.menu-link {
-    font-size: 20px;
-    margin: 15px 0;
-    cursor: pointer;
-}
-
-.menu-contact {
-    margin-top: 40px;
-    text-align: left;
-}
-
-.menu-contact p {
-    margin: 10px 0;
-}
-
-.menu-box button {
-    margin-top: 30px;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 25px;
-    background: #555;
-    color: white;
-    font-weight: bold;
-}
         body {
             margin: 0;
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #0a1b2a;
             color: white;
             text-align: center;
         }
 
+        /* HAMBURGER ICON */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 1000;
+            color: white;
+        }
+
+        /* HERO SECTION */
         .hero {
             padding: 120px 20px;
             background: linear-gradient(120deg, #003cff, #00b3ff);
@@ -79,15 +41,68 @@
             font-weight: bold;
         }
 
-        /* FORM STYLES */
+        /* SIDE MENU */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+        }
+
+        .menu-box {
+            width: 85%;
+            max-width: 350px;
+            background: #2b2b2b;
+            color: white;
+            height: 100%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .menu-box h2 {
+            margin-top: 0;
+            letter-spacing: 2px;
+        }
+
+        .menu-box hr {
+            margin: 15px 0 30px;
+        }
+
+        .menu-link {
+            font-size: 20px;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        .menu-contact {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .menu-contact p {
+            margin: 10px 0;
+        }
+
+        .menu-box button {
+            margin-top: 30px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: #555;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* FORM */
         .form-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background: rgba(0,0,0,0.7);
+            z-index: 999;
         }
 
         .form-box {
@@ -122,21 +137,15 @@
         .form-box .close {
             background: #999;
         }
-        .hamburger {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 1000;
-    color: white;
-}
     </style>
 </head>
 
-<<!-- HAMBURGER MENU ICON -->
-<div class="hamburger" onclick="openMenu()">☰</div>
+<body>
 
+<!-- HAMBURGER MENU ICON -->
+<div class="hamburger" onclick="openMenu()" aria-label="Open menu">☰</div>
+
+<!-- HERO -->
 <div class="hero">
     <h1>Welcome to Noble Heaven official website</h1>
     <p>Would you like to schedule an appointment with us?</p>
@@ -144,11 +153,11 @@
 </div>
 
 <!-- APPOINTMENT FORM -->
-<div id="appointmentForm" class="form-overlay">
-    <div class="form-box">
+<div id="appointmentForm" class="form-overlay" onclick="closeForm()">
+    <div class="form-box" onclick="event.stopPropagation()">
         <h2>Schedule an Appointment</h2>
 
-        <form>
+        <form onsubmit="event.preventDefault(); alert('Appointment submitted!');">
             <input type="text" placeholder="Full Name" required>
             <input type="tel" placeholder="Phone Number" required>
             <input type="email" placeholder="Email Address" required>
@@ -159,14 +168,15 @@
         </form>
     </div>
 </div>
-<!-- SIDE MENU OVERLAY -->
-<div id="menuOverlay" class="menu-overlay">
-    <div class="menu-box">
+
+<!-- SIDE MENU -->
+<div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
+    <div class="menu-box" onclick="event.stopPropagation()">
         <h2>Noble Heaven</h2>
         <hr>
 
         <p class="menu-link" onclick="closeMenu()">Home</p>
-        <p class="menu-link">About us</p>
+        <p class="menu-link">About Us</p>
 
         <div class="menu-contact">
             <p>📷 Instagramusername</p>
@@ -194,13 +204,6 @@
 
     function closeMenu() {
         document.getElementById("menuOverlay").style.display = "none";
-    }
-    function openForm() {
-        document.getElementById("appointmentForm").style.display = "block";
-    }
-
-    function closeForm() {
-        document.getElementById("appointmentForm").style.display = "none";
     }
 </script>
 
