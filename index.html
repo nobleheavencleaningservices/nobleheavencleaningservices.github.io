@@ -3,6 +3,58 @@
 <head>
     <title>Noble Heaven</title>
     <style>
+    .menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+}
+
+.menu-box {
+    width: 85%;
+    max-width: 350px;
+    background: #2b2b2b;
+    color: white;
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.menu-box h2 {
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.menu-box hr {
+    margin: 15px 0 30px;
+}
+
+.menu-link {
+    font-size: 20px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.menu-contact {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.menu-contact p {
+    margin: 10px 0;
+}
+
+.menu-box button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #555;
+    color: white;
+    font-weight: bold;
+}
         body {
             margin: 0;
             font-family: Arial;
@@ -70,10 +122,20 @@
         .form-box .close {
             background: #999;
         }
+        .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1000;
+    color: white;
+}
     </style>
 </head>
 
-<body>
+<<!-- HAMBURGER MENU ICON -->
+<div class="hamburger" onclick="openMenu()">☰</div>
 
 <div class="hero">
     <h1>Welcome to Noble Heaven official website</h1>
@@ -97,8 +159,42 @@
         </form>
     </div>
 </div>
+<!-- SIDE MENU OVERLAY -->
+<div id="menuOverlay" class="menu-overlay">
+    <div class="menu-box">
+        <h2>Noble Heaven</h2>
+        <hr>
+
+        <p class="menu-link" onclick="closeMenu()">Home</p>
+        <p class="menu-link">About us</p>
+
+        <div class="menu-contact">
+            <p>📷 Instagramusername</p>
+            <p>📘 Facebook username</p>
+            <p>📞 (123) 575-8797</p>
+            <p>✉️ username@gmail.com</p>
+        </div>
+
+        <button onclick="closeMenu()">Close</button>
+    </div>
+</div>
 
 <script>
+    function openForm() {
+        document.getElementById("appointmentForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("appointmentForm").style.display = "none";
+    }
+
+    function openMenu() {
+        document.getElementById("menuOverlay").style.display = "block";
+    }
+
+    function closeMenu() {
+        document.getElementById("menuOverlay").style.display = "none";
+    }
     function openForm() {
         document.getElementById("appointmentForm").style.display = "block";
     }
