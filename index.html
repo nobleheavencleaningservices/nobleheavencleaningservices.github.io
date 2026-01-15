@@ -4,30 +4,22 @@
     <meta charset="UTF-8">
     <title>Noble Heaven</title>
 
-    <!-- MOBILE SCALING -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background: url("background.JPG") no-repeat center center fixed;
+            background-size: cover;
             color: #000;
             text-align: center;
-
-            /* BACKGROUND IMAGE */
-            background-image: url("background.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
         }
 
         /* HAMBURGER */
         .hamburger {
             position: fixed;
-            top: 24px;
-            left: 24px;
-            font-size: 32px;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
             cursor: pointer;
             z-index: 1000;
             color: #000;
@@ -35,42 +27,36 @@
 
         /* HOME */
         .home {
-            padding: 150px 20px 90px;
-            background: rgba(255,255,255,0.65);
-            backdrop-filter: blur(2px);
+            padding: 120px 20px 60px;
         }
 
-        /* LOGO (MADE BIGGER) */
         .logo {
-            width: 85%;
-            max-width: 360px;
-            margin-bottom: 55px;
+            max-width: 260px; /* slightly bigger */
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 34px;
-            letter-spacing: 4px;
-            margin-bottom: 22px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
         }
 
         .description {
-            font-size: 18px;
-            line-height: 1.8;
+            font-size: 15px;
+            line-height: 1.6;
             color: #444;
-            max-width: 360px;
-            margin: 0 auto 55px;
+            max-width: 300px;
+            margin: 0 auto 40px;
         }
 
         .appointment-btn {
             display: inline-block;
-            padding: 18px 55px;
+            padding: 14px 40px;
             background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
             color: white;
             text-decoration: none;
-            border-radius: 16px;
-            font-size: 18px;
-            font-weight: 500;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+            border-radius: 12px;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
         /* FORM */
@@ -85,31 +71,29 @@
         .form-box {
             background: white;
             color: black;
-            max-width: 420px;
-            margin: 120px auto;
-            padding: 32px;
-            border-radius: 18px;
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 15px;
             text-align: left;
         }
 
         .form-box input,
         .form-box textarea {
             width: 100%;
-            padding: 12px;
-            margin: 12px 0;
-            font-size: 16px;
+            padding: 10px;
+            margin: 10px 0;
         }
 
         .form-box button {
             width: 100%;
-            padding: 14px;
-            margin-top: 12px;
+            padding: 12px;
+            margin-top: 10px;
             border: none;
-            border-radius: 28px;
+            border-radius: 25px;
             background: #5a9ed8;
             color: white;
             font-weight: bold;
-            font-size: 16px;
             cursor: pointer;
         }
 
@@ -123,38 +107,37 @@
             position: fixed;
             inset: 0;
             background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             z-index: 999;
         }
 
         /* MENU CARD */
         .menu-box {
-            width: 88%;
-            max-width: 380px;
-            margin: 90px auto;
+            width: 85%;
+            max-width: 350px;
+            margin: 80px auto;
             background: rgba(30,30,30,0.7);
             color: white;
-            border-radius: 20px;
-            padding: 34px 22px;
+            border-radius: 18px;
+            padding: 30px 20px;
             text-align: center;
         }
 
         .menu-box h2 {
             margin: 0;
-            font-size: 22px;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
         }
 
         .menu-divider {
             height: 1px;
             background: rgba(255,255,255,0.4);
-            margin: 18px 0 30px;
+            margin: 15px 0 25px;
         }
 
         .menu-link {
-            font-size: 22px;
-            margin: 22px 0;
+            font-size: 20px;
+            margin: 18px 0;
             cursor: pointer;
         }
 
@@ -163,21 +146,21 @@
         }
 
         .menu-contact {
-            margin-top: 40px;
+            margin-top: 35px;
             text-align: left;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 14px;
-            margin: 18px 0;
-            font-size: 16px;
+            gap: 12px;
+            margin: 14px 0;
+            font-size: 14px;
         }
 
         .contact-item img {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             object-fit: contain;
             opacity: 0.9;
         }
@@ -186,12 +169,10 @@
 
 <body>
 
-<!-- HAMBURGER -->
 <div class="hamburger" onclick="openMenu()">☰</div>
 
-<!-- HOME -->
 <div class="home">
-    <img src="nobleheaven.png.PNG" alt="Noble Heaven Logo" class="logo">
+    <img src="nobleheaven.png" alt="Noble Heaven Logo" class="logo">
 
     <h1>NOBLE HEAVEN</h1>
 
@@ -205,7 +186,6 @@
     <a href="#" class="appointment-btn" onclick="openForm()">Appointment</a>
 </div>
 
-<!-- FORM -->
 <div id="appointmentForm" class="form-overlay" onclick="closeForm()">
     <div class="form-box" onclick="event.stopPropagation()">
         <h2>Schedule an Appointment</h2>
@@ -222,10 +202,8 @@
     </div>
 </div>
 
-<!-- MENU -->
 <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
     <div class="menu-box" onclick="event.stopPropagation()">
-
         <h2>NOBLE HEAVEN</h2>
         <div class="menu-divider"></div>
 
@@ -234,26 +212,25 @@
 
         <div class="menu-contact">
             <div class="contact-item">
-                <img src="instagram.png" alt="Instagram">
+                <img src="instagram.png">
                 <span>Instagramusername</span>
             </div>
 
             <div class="contact-item">
-                <img src="facebook.png" alt="Facebook">
+                <img src="facebook.png">
                 <span>Facebook username</span>
             </div>
 
             <div class="contact-item">
-                <img src="phone.png" alt="Phone">
+                <img src="phone.png">
                 <span>(123) 575-8797</span>
             </div>
 
             <div class="contact-item">
-                <img src="email.png" alt="Email">
+                <img src="email.png">
                 <span>username@gmail.com</span>
             </div>
         </div>
-
     </div>
 </div>
 
