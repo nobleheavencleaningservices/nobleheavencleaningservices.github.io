@@ -24,7 +24,7 @@
             color: #000;
         }
 
-        /* MAIN CONTENT */
+        /* HOME */
         .home {
             padding: 120px 20px 60px;
         }
@@ -47,7 +47,6 @@
             margin: 0 auto 40px;
         }
 
-        /* APPOINTMENT BUTTON */
         .appointment-btn {
             display: inline-block;
             padding: 14px 40px;
@@ -56,11 +55,10 @@
             text-decoration: none;
             border-radius: 12px;
             font-size: 16px;
-            font-weight: 500;
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
-        /* FORM OVERLAY */
+        /* FORM */
         .form-overlay {
             display: none;
             position: fixed;
@@ -102,40 +100,68 @@
             background: #999;
         }
 
-        /* SIDE MENU */
+        /* MENU OVERLAY (BLUR BACKGROUND) */
         .menu-overlay {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             z-index: 999;
         }
 
+        /* MENU CARD */
         .menu-box {
             width: 85%;
             max-width: 350px;
-            background: #2b2b2b;
+            margin: 80px auto;
+            background: rgba(30,30,30,0.7);
             color: white;
-            height: 100%;
-            padding: 30px;
+            border-radius: 18px;
+            padding: 30px 20px;
             text-align: center;
+        }
+
+        .menu-box h2 {
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        .menu-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.4);
+            margin: 15px 0 25px;
         }
 
         .menu-link {
             font-size: 20px;
-            margin: 15px 0;
+            margin: 18px 0;
             cursor: pointer;
         }
 
-        .menu-box button {
-            margin-top: 30px;
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 25px;
-            background: #555;
-            color: white;
-            font-weight: bold;
+        .menu-link.active {
+            text-decoration: underline;
+        }
+
+        .menu-contact {
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 14px 0;
+            font-size: 14px;
+        }
+
+        .contact-item img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -147,7 +173,7 @@
 
 <!-- HOME -->
 <div class="home">
-    <img src="logo.png" alt="Noble Heaven Logo" class="logo">
+    <img src="nobleheaven.png" alt="Noble Heaven Logo" class="logo">
 
     <h1>NOBLE HEAVEN</h1>
 
@@ -181,12 +207,35 @@
 <!-- MENU -->
 <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
     <div class="menu-box" onclick="event.stopPropagation()">
-        <h2>Noble Heaven</h2>
 
-        <p class="menu-link" onclick="closeMenu()">Home</p>
-        <p class="menu-link">About Us</p>
+        <h2>NOBLE HEAVEN</h2>
+        <div class="menu-divider"></div>
 
-        <button onclick="closeMenu()">Close</button>
+        <div class="menu-link active" onclick="closeMenu()">Home</div>
+        <div class="menu-link">About us</div>
+
+        <div class="menu-contact">
+            <div class="contact-item">
+                <img src="instagram.png" alt="Instagram">
+                <span>Instagramusername</span>
+            </div>
+
+            <div class="contact-item">
+                <img src="facebook.png" alt="Facebook">
+                <span>Facebook username</span>
+            </div>
+
+            <div class="contact-item">
+                <img src="phone.png" alt="Phone">
+                <span>(123) 575-8797</span>
+            </div>
+
+            <div class="contact-item">
+                <img src="email.png" alt="Email">
+                <span>username@gmail.com</span>
+            </div>
+        </div>
+
     </div>
 </div>
 
