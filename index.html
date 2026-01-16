@@ -1,178 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Noble Heaven</title>
+<meta charset="UTF-8">
+<title>Noble Heaven</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url("background.JPG") no-repeat center center fixed;
-            background-size: cover;
-            color: #000;
-            text-align: center;
-        }
+<style>
+* { box-sizing: border-box; }
 
-        /* HAMBURGER */
-        .hamburger {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            font-size: 28px;
-            cursor: pointer;
-            z-index: 1000;
-            color: #000;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("background.JPG") no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+}
 
-        /* HOME */
-        .home {
-            padding: 120px 20px 60px;
-        }
+/* HAMBURGER */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2000;
+}
 
-        .logo {
-            max-width: 260px;
-            margin-bottom: 40px;
-        }
+/* SECTIONS */
+.section {
+    display: none;
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    text-align: center;
+}
 
-        h1 {
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-        }
+.section.active {
+    display: block;
+}
 
-        .description {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #444;
-            max-width: 340px;
-            margin: 0 auto 40px;
-        }
+/* HOME */
+.logo {
+    max-width: 280px;
+    margin-bottom: 40px;
+}
 
-        .appointment-btn {
-            display: inline-block;
-            padding: 14px 40px;
-            background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 16px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
+h1 {
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
 
-        /* FORM */
-        .form-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.7);
-            z-index: 999;
-        }
+.description {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 360px;
+    margin: 0 auto 40px;
+}
 
-        .form-box {
-            background: white;
-            color: black;
-            max-width: 400px;
-            margin: 100px auto;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: left;
-        }
+.appointment-btn {
+    display: inline-block;
+    padding: 16px 45px;
+    background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
 
-        .form-box input,
-        .form-box textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
+/* ABOUT US */
+#about {
+    background: url("about-bg.JPG") no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+}
 
-        .form-box button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 25px;
-            background: #5a9ed8;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.about-hero {
+    max-width: 100%;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
 
-        .form-box .close {
-            background: #999;
-        }
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
 
-        /* MENU OVERLAY */
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            z-index: 999;
-        }
+.about-text {
+    max-width: 600px;
+    margin: 0 auto 60px;
+    font-size: 16px;
+    line-height: 1.8;
+    background: rgba(255,255,255,0.7);
+    padding: 30px;
+    border-radius: 16px;
+}
 
-        /* MENU CARD */
-        .menu-box {
-            width: 85%;
-            max-width: 350px;
-            margin: 80px auto;
-            background: rgba(30,30,30,0.7);
-            color: white;
-            border-radius: 18px;
-            padding: 30px 20px;
-            text-align: center;
-        }
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    padding: 0 20px 80px;
+}
 
-        .menu-box h2 {
-            margin: 0;
-            letter-spacing: 3px;
-        }
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
 
-        .menu-divider {
-            height: 1px;
-            background: rgba(255,255,255,0.4);
-            margin: 15px 0 25px;
-        }
+/* MENU OVERLAY */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    z-index: 1500;
+}
 
-        .menu-link {
-            font-size: 20px;
-            margin: 18px 0;
-            cursor: pointer;
-        }
+/* MENU CARD */
+.menu-box {
+    width: 85%;
+    max-width: 350px;
+    margin: 80px auto;
+    background: rgba(30,30,30,0.7);
+    color: white;
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+}
 
-        .menu-link.active {
-            text-decoration: underline;
-        }
+.menu-link {
+    font-size: 20px;
+    margin: 18px 0;
+    cursor: pointer;
+}
 
-        .menu-contact {
-            margin-top: 35px;
-            text-align: left;
-        }
+.menu-link.active {
+    text-decoration: underline;
+}
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 14px 0;
-            font-size: 14px;
-        }
+.menu-contact {
+    margin-top: 35px;
+    text-align: left;
+}
 
-        .contact-item img {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-            opacity: 0.9;
-        }
-    </style>
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+    font-size: 14px;
+}
+
+.contact-item img {
+    width: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <div class="hamburger" onclick="openMenu()">☰</div>
 
-<div class="home">
-    <img src="nobleheaven.png.PNG" alt="Noble Heaven Logo" class="logo">
+<!-- HOME -->
+<div id="home" class="section active">
+    <img src="nobleheaven.png.PNG" class="logo">
 
     <h1>NOBLE HEAVEN</h1>
 
@@ -182,73 +177,66 @@
         personal touch to every space.
     </div>
 
-    <a href="#" class="appointment-btn" onclick="openForm()">Appointment</a>
+    <a class="appointment-btn">Appointment</a>
 </div>
 
-<div id="appointmentForm" class="form-overlay" onclick="closeForm()">
-    <div class="form-box" onclick="event.stopPropagation()">
-        <h2>Schedule an Appointment</h2>
+<!-- ABOUT -->
+<div id="about" class="section">
+    <img src="about-hero.JPG" class="about-hero">
 
-        <form onsubmit="event.preventDefault(); alert('Appointment submitted!');">
-            <input type="text" placeholder="Full Name" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea placeholder="Tell us about your appointment" rows="4"></textarea>
+    <div class="about-text">
+        <h2>Who are we?</h2>
+        Faith Cleaning Services helps busy homes and offices reclaim their time with consistent, professional care.
+        We believe cleaning should feel personal, reliable, and comforting — not rushed or impersonal.
+    </div>
 
-            <button type="submit">Submit</button>
-            <button type="button" class="close" onclick="closeForm()">Close</button>
-        </form>
+    <h2>Gallery</h2>
+
+    <div class="gallery">
+        <img src="gallery1.JPG">
+        <img src="gallery2.JPG">
+        <img src="gallery3.JPG">
+        <img src="gallery4.JPG">
     </div>
 </div>
 
+<!-- MENU -->
 <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
     <div class="menu-box" onclick="event.stopPropagation()">
         <h2>NOBLE HEAVEN</h2>
-        <div class="menu-divider"></div>
 
-        <div class="menu-link active" onclick="closeMenu()">Home</div>
-        <div class="menu-link">About us</div>
+        <div class="menu-link active" onclick="showHome()">Home</div>
+        <div class="menu-link" onclick="showAbout()">About us</div>
 
         <div class="menu-contact">
-            <div class="contact-item">
-                <img src="instagram .PNG">
-                <span>@Nobleheavencleaningservices</span>
-            </div>
-
-            <div class="contact-item">
-                <img src="Facebook.PNG">
-                <span>Noble heaven cleaning services</span>
-            </div>
-
-            <div class="contact-item">
-                <img src="phone.PNG">
-                <span>+1 (385) 592-0897</span>
-            </div>
-
-            <div class="contact-item">
-                <img src="email.PNG">
-                <span>nobleheaven.cleaningservices@gmail.com</span>
-            </div>
+            <div class="contact-item"><img src="instagram .PNG">@Nobleheavencleaningservices</div>
+            <div class="contact-item"><img src="Facebook.PNG">Noble heaven cleaning services</div>
+            <div class="contact-item"><img src="phone.PNG">+1 (385) 592-0897</div>
+            <div class="contact-item"><img src="email.PNG">nobleheaven.cleaningservices@gmail.com</div>
         </div>
     </div>
 </div>
 
 <script>
-    function openForm() {
-        document.getElementById("appointmentForm").style.display = "block";
-    }
+function openMenu() {
+    document.getElementById("menuOverlay").style.display = "block";
+}
 
-    function closeForm() {
-        document.getElementById("appointmentForm").style.display = "none";
-    }
+function closeMenu() {
+    document.getElementById("menuOverlay").style.display = "none";
+}
 
-    function openMenu() {
-        document.getElementById("menuOverlay").style.display = "block";
-    }
+function showHome() {
+    document.getElementById("home").classList.add("active");
+    document.getElementById("about").classList.remove("active");
+    closeMenu();
+}
 
-    function closeMenu() {
-        document.getElementById("menuOverlay").style.display = "none";
-    }
+function showAbout() {
+    document.getElementById("about").classList.add("active");
+    document.getElementById("home").classList.remove("active");
+    closeMenu();
+}
 </script>
 
 </body>
