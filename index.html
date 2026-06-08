@@ -29,41 +29,58 @@ body {
 .section {
     display: none;
     min-height: 100vh;
-    padding: 120px 20px 60px;
+    padding: 60px 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .section.active {
-    display: block;
+    display: flex;
+}
+
+/* HOME CARD (modern center layout) */
+.home-container {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255,255,255,0.65);
+    padding: 40px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
 }
 
 /* HOME */
 .logo {
-    max-width: 480px;
-    margin-bottom: 60px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    letter-spacing: 3px;
-    margin-bottom: 15px;
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
 }
 
 .description {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.7;
-    max-width: 360px;
-    margin: 0 auto 40px;
+    max-width: 650px;
+    margin: 0 auto 30px;
 }
 
 .appointment-btn {
     display: inline-block;
-    padding: 16px 45px;
+    padding: 20px 60px;
     background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
     color: white;
     text-decoration: none;
     border-radius: 16px;
-    font-size: 18px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     cursor: pointer;
 }
 
@@ -77,12 +94,6 @@ h1 {
     width: 90%;
     max-width: 600px;
     margin: 0 auto 30px;
-    opacity: 0;
-    animation: fadeIn 1.5s ease forwards;
-}
-
-@keyframes fadeIn {
-    to { opacity: 1; }
 }
 
 .about-text {
@@ -120,8 +131,8 @@ h1 {
 
 .form-box {
     background: white;
-    max-width: 400px;
-    margin: 120px auto;
+    max-width: 420px;
+    margin: 100px auto;
     padding: 30px;
     border-radius: 16px;
     text-align: left;
@@ -150,7 +161,7 @@ h1 {
     background: #999;
 }
 
-/* MENU OVERLAY */
+/* MENU */
 .menu-overlay {
     display: none;
     position: fixed;
@@ -160,7 +171,6 @@ h1 {
     z-index: 1500;
 }
 
-/* MENU CARD */
 .menu-box {
     width: 85%;
     max-width: 350px;
@@ -198,6 +208,13 @@ h1 {
 .contact-item img {
     width: 20px;
 }
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+    h1 { font-size: 34px; }
+    .description { font-size: 16px; }
+    .appointment-btn { font-size: 18px; padding: 16px 40px; }
+}
 </style>
 </head>
 
@@ -207,17 +224,20 @@ h1 {
 
 <!-- HOME -->
 <div id="home" class="section active">
-    <img src="nobleheaven.png.PNG" class="logo">
+    <div class="home-container">
 
-    <h1>NOBLE HEAVEN</h1>
+        <img src="nobleheaven.png.PNG" class="logo">
 
-    <div class="description">
-        Noble Heaven Cleaning Services helps busy homes and offices “buy back” their time with professional, reliable cleaning.
-        Our easy-to-use platform makes estimates simple and fast, and our scented candles and embroidered dish cloths add a cozy,
-        personal touch to every space.
+        <h1>NOBLE HEAVEN</h1>
+
+        <div class="description">
+            Noble Heaven Cleaning Services helps busy homes and offices reclaim their time with professional, reliable cleaning.
+            Fast estimates, consistent service, and a personal touch that makes your space feel renewed.
+        </div>
+
+        <div class="appointment-btn" onclick="openForm()">FREE Estimate</div>
+
     </div>
-
-    <div class="appointment-btn" onclick="openForm()">Appointment</div>
 </div>
 
 <!-- ABOUT -->
@@ -226,7 +246,7 @@ h1 {
 
     <div class="about-text">
         <h2>Who are we?</h2>
-        Noble Heaven cleaning services helps busy homes and offices reclaim their time with consistent, professional care.
+        Noble Heaven Cleaning Services helps busy homes and offices reclaim their time with consistent, professional care.
     </div>
 
     <h2>Gallery</h2>
@@ -239,16 +259,23 @@ h1 {
     </div>
 </div>
 
-<!-- APPOINTMENT FORM -->
+<!-- FORM (NOW SENDS TO EMAIL) -->
 <div id="appointmentForm" class="form-overlay" onclick="closeForm()">
     <div class="form-box" onclick="event.stopPropagation()">
-        <h2>Schedule an Appointment</h2>
+        <h2>Request a Free Estimate</h2>
 
-        <form onsubmit="event.preventDefault(); alert('Appointment submitted!');">
-            <input type="text" placeholder="Full Name" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea rows="4" placeholder="Tell us about your appointment"></textarea>
+        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com" method="POST">
+
+            <!-- disables spam bots -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- optional redirect after submit -->
+            <input type="hidden" name="_next" value="https://thankyou-page.com">
+
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" rows="4" placeholder="Tell us about your cleaning needs"></textarea>
 
             <button type="submit">Submit</button>
             <button type="button" class="close" onclick="closeForm()">Close</button>
