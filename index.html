@@ -15,12 +15,12 @@ body {
     color: #000;
 }
 
-/* HAMBURGER */
+/* HAMBURGER (BIGGER) */
 .hamburger {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 30px;
+    font-size: 42px; /* increased */
     cursor: pointer;
     z-index: 2000;
 }
@@ -51,7 +51,6 @@ body {
     backdrop-filter: blur(6px);
 }
 
-/* HOME */
 .logo {
     width: 100%;
     max-width: 600px;
@@ -76,7 +75,6 @@ h1 {
     padding: 20px 60px;
     background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
     color: white;
-    text-decoration: none;
     border-radius: 16px;
     font-size: 22px;
     font-weight: bold;
@@ -120,7 +118,7 @@ h1 {
     object-fit: cover;
 }
 
-/* FORM OVERLAY */
+/* FORM */
 .form-overlay {
     display: none;
     position: fixed;
@@ -157,46 +155,47 @@ h1 {
     cursor: pointer;
 }
 
-/* THANK YOU MESSAGE */
+/* THANK YOU */
 #thankYouMessage {
     display: none;
     text-align: center;
     padding: 20px;
 }
 
-/* MENU */
+/* MENU (BIGGER) */
 .menu-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
     z-index: 1500;
 }
 
 .menu-box {
-    width: 85%;
-    max-width: 350px;
+    width: 92%;           /* increased */
+    max-width: 450px;     /* increased */
     margin: 80px auto;
-    background: rgba(30,30,30,0.7);
+    background: rgba(30,30,30,0.75);
     color: white;
-    border-radius: 18px;
-    padding: 30px 20px;
+    border-radius: 22px;
+    padding: 40px 30px;   /* increased */
     text-align: center;
 }
 
+.menu-box h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
 .menu-link {
-    font-size: 20px;
-    margin: 18px 0;
+    font-size: 24px;      /* increased */
+    margin: 22px 0;
     cursor: pointer;
 }
 
-.menu-link.active {
-    text-decoration: underline;
-}
-
 .menu-contact {
-    margin-top: 35px;
+    margin-top: 40px;
     text-align: left;
 }
 
@@ -204,12 +203,12 @@ h1 {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin: 14px 0;
-    font-size: 14px;
+    margin: 18px 0;
+    font-size: 16px;      /* increased */
 }
 
 .contact-item img {
-    width: 20px;
+    width: 22px;
 }
 
 /* MOBILE FIX */
@@ -235,7 +234,6 @@ h1 {
 
         <div class="description">
             Noble Heaven Cleaning Services helps busy homes and offices reclaim their time with professional, reliable cleaning.
-            Fast estimates, consistent service, and a personal touch that makes your space feel renewed.
         </div>
 
         <div class="appointment-btn" onclick="openForm()">FREE Estimate</div>
@@ -275,7 +273,7 @@ h1 {
             <input type="hidden" name="_captcha" value="false">
 
             <input type="text" name="name" placeholder="Full Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="tel" name="phone" placeholder="Phone Number" value="(435) 565-1174" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <textarea name="message" rows="4" placeholder="Tell us about your cleaning needs"></textarea>
 
@@ -303,7 +301,7 @@ h1 {
         <div class="menu-contact">
             <div class="contact-item"><img src="instagram .PNG">@Nobleheavencleaningservices</div>
             <div class="contact-item"><img src="Facebook.PNG">Noble heaven cleaning services</div>
-            <div class="contact-item"><img src="phone.PNG">+1 (385) 592-0897</div>
+            <div class="contact-item"><img src="phone.PNG">(435) 565-1174</div>
             <div class="contact-item"><img src="email.PNG">nobleheaven.cleaningservices@gmail.com</div>
         </div>
 
@@ -342,7 +340,6 @@ function closeForm() {
     document.getElementById("thankYouMessage").style.display = "none";
 }
 
-// send email + show thank you
 document.getElementById("estimateForm").addEventListener("submit", function () {
     setTimeout(() => {
         this.style.display = "none";
