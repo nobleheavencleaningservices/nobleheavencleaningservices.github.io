@@ -4,23 +4,26 @@
 <meta charset="UTF-8">
 <title>Noble Heaven</title>
 
+<!-- NEW FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 * { box-sizing: border-box; }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background: url("background.JPG") no-repeat center center fixed;
     background-size: cover;
     color: #000;
 }
 
-/* HAMBURGER (BIGGER) */
+/* HAMBURGER (TWICE AS BIG) */
 .hamburger {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 42px;
+    font-size: 80px;
     cursor: pointer;
     z-index: 2000;
 }
@@ -170,27 +173,28 @@ h1 {
     z-index: 1500;
 }
 
-/* MENU BOX (BIGGER) */
+/* MENU BOX (DOUBLED SIZE FEEL) */
 .menu-box {
-    width: 92%;
-    max-width: 420px;
-    margin: 60px auto;
-    background: rgba(30,30,30,0.85);
+    width: 95%;
+    max-width: 520px;
+    margin: 40px auto;
+    background: rgba(30,30,30,0.88);
     color: white;
-    border-radius: 22px;
-    padding: 40px 25px;
+    border-radius: 26px;
+    padding: 60px 35px;
     text-align: center;
 }
 
-/* MENU TEXT BIGGER */
+/* TITLE (KEEP SAME BRAND LOOK) */
 .menu-box h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 30px;
 }
 
+/* MENU LINKS BIGGER */
 .menu-link {
-    font-size: 24px;
-    margin: 22px 0;
+    font-size: 30px;
+    margin: 28px 0;
     cursor: pointer;
 }
 
@@ -198,22 +202,22 @@ h1 {
     text-decoration: underline;
 }
 
-/* CONTACT BIGGER */
+/* CONTACT SECTION BIGGER */
 .menu-contact {
-    margin-top: 45px;
+    margin-top: 55px;
     text-align: left;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin: 18px 0;
-    font-size: 16px;
+    gap: 16px;
+    margin: 22px 0;
+    font-size: 18px;
 }
 
 .contact-item img {
-    width: 24px;
+    width: 30px;
 }
 
 /* MOBILE */
@@ -221,6 +225,10 @@ h1 {
     h1 { font-size: 34px; }
     .description { font-size: 16px; }
     .appointment-btn { font-size: 18px; padding: 16px 40px; }
+
+    .hamburger {
+        font-size: 60px;
+    }
 }
 </style>
 </head>
@@ -290,6 +298,7 @@ h1 {
 <!-- MENU -->
 <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
     <div class="menu-box" onclick="event.stopPropagation()">
+
         <h2>NOBLE HEAVEN</h2>
 
         <div class="menu-link active" onclick="showHome()">Home</div>
@@ -304,6 +313,7 @@ h1 {
             <div class="contact-item"><img src="Facebook.PNG">Noble heaven cleaning services</div>
             <div class="contact-item"><img src="email.PNG">nobleheaven.cleaningservices@gmail.com</div>
         </div>
+
     </div>
 </div>
 
