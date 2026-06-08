@@ -20,7 +20,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 42px; /* increased */
+    font-size: 42px;
     cursor: pointer;
     z-index: 2000;
 }
@@ -75,6 +75,7 @@ h1 {
     padding: 20px 60px;
     background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
     color: white;
+    text-decoration: none;
     border-radius: 16px;
     font-size: 22px;
     font-weight: bold;
@@ -155,14 +156,11 @@ h1 {
     cursor: pointer;
 }
 
-/* THANK YOU */
-#thankYouMessage {
-    display: none;
-    text-align: center;
-    padding: 20px;
+.form-box .close {
+    background: #999;
 }
 
-/* MENU (BIGGER) */
+/* MENU OVERLAY (BIGGER) */
 .menu-overlay {
     display: none;
     position: fixed;
@@ -172,46 +170,53 @@ h1 {
     z-index: 1500;
 }
 
+/* MENU BOX (BIGGER) */
 .menu-box {
-    width: 92%;           /* increased */
-    max-width: 450px;     /* increased */
-    margin: 80px auto;
-    background: rgba(30,30,30,0.75);
+    width: 92%;
+    max-width: 420px;
+    margin: 60px auto;
+    background: rgba(30,30,30,0.85);
     color: white;
     border-radius: 22px;
-    padding: 40px 30px;   /* increased */
+    padding: 40px 25px;
     text-align: center;
 }
 
+/* MENU TEXT BIGGER */
 .menu-box h2 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
 .menu-link {
-    font-size: 24px;      /* increased */
+    font-size: 24px;
     margin: 22px 0;
     cursor: pointer;
 }
 
+.menu-link.active {
+    text-decoration: underline;
+}
+
+/* CONTACT BIGGER */
 .menu-contact {
-    margin-top: 40px;
+    margin-top: 45px;
     text-align: left;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     margin: 18px 0;
-    font-size: 16px;      /* increased */
+    font-size: 16px;
 }
 
 .contact-item img {
-    width: 22px;
+    width: 24px;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 600px) {
     h1 { font-size: 34px; }
     .description { font-size: 16px; }
@@ -234,6 +239,7 @@ h1 {
 
         <div class="description">
             Noble Heaven Cleaning Services helps busy homes and offices reclaim their time with professional, reliable cleaning.
+            Fast estimates, consistent service, and a personal touch that makes your space feel renewed.
         </div>
 
         <div class="appointment-btn" onclick="openForm()">FREE Estimate</div>
@@ -263,14 +269,12 @@ h1 {
 <!-- FORM -->
 <div id="appointmentForm" class="form-overlay" onclick="closeForm()">
     <div class="form-box" onclick="event.stopPropagation()">
-
         <h2>Request a Free Estimate</h2>
 
-        <form id="estimateForm"
-              action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
-              method="POST">
+        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com" method="POST">
 
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://thankyou-page.com">
 
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="tel" name="phone" placeholder="Phone Number" value="(435) 565-1174" required>
@@ -278,33 +282,28 @@ h1 {
             <textarea name="message" rows="4" placeholder="Tell us about your cleaning needs"></textarea>
 
             <button type="submit">Submit</button>
-            <button type="button" onclick="closeForm()">Close</button>
+            <button type="button" class="close" onclick="closeForm()">Close</button>
         </form>
-
-        <div id="thankYouMessage">
-            <h3>Thank you!</h3>
-            <p>A member of our team will contact you shortly.</p>
-        </div>
-
     </div>
 </div>
 
 <!-- MENU -->
 <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
     <div class="menu-box" onclick="event.stopPropagation()">
-
         <h2>NOBLE HEAVEN</h2>
 
         <div class="menu-link active" onclick="showHome()">Home</div>
         <div class="menu-link" onclick="showAbout()">About us</div>
 
         <div class="menu-contact">
+            <div class="contact-item">
+                <img src="phone.PNG">
+                (435) 565-1174
+            </div>
             <div class="contact-item"><img src="instagram .PNG">@Nobleheavencleaningservices</div>
             <div class="contact-item"><img src="Facebook.PNG">Noble heaven cleaning services</div>
-            <div class="contact-item"><img src="phone.PNG">(435) 565-1174</div>
             <div class="contact-item"><img src="email.PNG">nobleheaven.cleaningservices@gmail.com</div>
         </div>
-
     </div>
 </div>
 
@@ -335,17 +334,7 @@ function openForm() {
 
 function closeForm() {
     document.getElementById("appointmentForm").style.display = "none";
-
-    document.getElementById("estimateForm").style.display = "block";
-    document.getElementById("thankYouMessage").style.display = "none";
 }
-
-document.getElementById("estimateForm").addEventListener("submit", function () {
-    setTimeout(() => {
-        this.style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "block";
-    }, 500);
-});
 </script>
 
 </body>
