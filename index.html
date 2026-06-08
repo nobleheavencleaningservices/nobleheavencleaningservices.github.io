@@ -76,6 +76,7 @@ h1 {
     padding: 20px 60px;
     background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
     color: white;
+    text-decoration: none;
     border-radius: 16px;
     font-size: 22px;
     font-weight: bold;
@@ -119,7 +120,7 @@ h1 {
     object-fit: cover;
 }
 
-/* FORM */
+/* FORM OVERLAY */
 .form-overlay {
     display: none;
     position: fixed;
@@ -211,6 +212,7 @@ h1 {
     width: 20px;
 }
 
+/* MOBILE FIX */
 @media (max-width: 600px) {
     h1 { font-size: 34px; }
     .description { font-size: 16px; }
@@ -233,6 +235,7 @@ h1 {
 
         <div class="description">
             Noble Heaven Cleaning Services helps busy homes and offices reclaim their time with professional, reliable cleaning.
+            Fast estimates, consistent service, and a personal touch that makes your space feel renewed.
         </div>
 
         <div class="appointment-btn" onclick="openForm()">FREE Estimate</div>
@@ -339,7 +342,7 @@ function closeForm() {
     document.getElementById("thankYouMessage").style.display = "none";
 }
 
-// handle submit (email + thank you message)
+// send email + show thank you
 document.getElementById("estimateForm").addEventListener("submit", function () {
     setTimeout(() => {
         this.style.display = "none";
