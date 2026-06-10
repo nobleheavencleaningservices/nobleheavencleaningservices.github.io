@@ -170,19 +170,39 @@ h1 {
     margin: 0 auto 30px;
 }
 
-.appointment-btn {
-    display: inline-block;
-    padding: 20px 60px;
-    background: linear-gradient(to bottom, #7db7e8, #5a9ed8);
-    color: white;
-    text-decoration: none;
-    border-radius: 16px;
-    font-size: 22px;
-    font-weight: bold;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    cursor: pointer;
+.appointment-btn{
+    display:inline-block;
+
+    padding:18px 50px;
+
+    background:linear-gradient(
+    180deg,
+    #d8bf86,
+    #b89655
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    border-radius:999px;
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 24px rgba(0,0,0,0.18);
+
+    transition:0.3s;
 }
-/* Here is line 185 */
+
+.appointment-btn:hover{
+    transform:translateY(-2px);
+}
+/* Here is line 205 */
 /* ABOUT */
 #about {
     background: url("about-bg.JPG") no-repeat center center fixed;
@@ -237,7 +257,7 @@ h1 {
     text-align: left;
 }
 
-/* Here is line 240 */
+/* Here is line  260 */
 
 .form-box input,
 .form-box textarea {
@@ -330,7 +350,7 @@ h1 {
 <div class="hamburger" onclick="openMenu()">☰</div>
 
 <!-- HOME -->
-<!-- Here is line 333 -->
+<!-- Here is line 353 -->
 
 <div id="home" class="section active">
     <div class="hero-overlay">
@@ -398,7 +418,7 @@ h1 {
         </form>
     </div>
 </div>
-<!-- Here is line 401 -->
+<!-- Here is line 421 -->
 <!-- MENU -->
 <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
     <div class="menu-box" onclick="event.stopPropagation()">
