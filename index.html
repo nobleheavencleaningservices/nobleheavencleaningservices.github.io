@@ -18,7 +18,16 @@ body {
     background-size: cover;
     color: #000;
 }
-
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 /* HAMBURGER (BIGGER) */
 .hamburger {
 position: fixed;
@@ -273,7 +282,13 @@ h1 {
     color:#333;
     margin-bottom:25px;
 }
+.promise-card{
+    transition:0.4s;
+}
 
+.promise-card:hover{
+    transform:translateY(-6px);
+}
 .about-main-image{
     width:100%;
     border-radius:40px;
@@ -296,13 +311,14 @@ h1 {
     margin-bottom:15px;
 }
 .promise-card{
-    background:rgba(255,255,255,0.72);
+    background:rgba(255,255,255,0.82);
+    border:1px solid rgba(216,191,134,0.18);
     backdrop-filter:blur(6px);
     padding:35px 25px;
     border-radius:24px;
     text-align:center;
     line-height:1.7;
-    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .promise-card h3{
@@ -361,8 +377,10 @@ h1 {
 @media (max-width:900px){
 
     .about-grid{
-        grid-template-columns:1fr;
-    }
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
 
     .about-title{
         font-size:54px;
@@ -372,6 +390,15 @@ h1 {
         flex-direction:column;
         text-align:center;
     }
+}
+.about-right{
+    margin-top:30px;
+}
+
+.about-main-image{
+    max-width:500px;
+    margin:0 auto;
+    display:block;
 }
 
 /* GALLERY */
