@@ -408,13 +408,21 @@ h1 {
 .service-area-section{
     margin-bottom:100px;
     animation:fadeUp 0.8s ease forwards;
-}
-
-.service-area-grid{
+    
+}.service-area-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    grid-template-columns:
+    repeat(4,minmax(140px,1fr));
+
     gap:18px;
+
     margin-top:40px;
+
+    max-width:1000px;
+
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .service-area-grid div{
