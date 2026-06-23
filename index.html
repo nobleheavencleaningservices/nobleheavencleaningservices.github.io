@@ -663,33 +663,61 @@ h1 {
     gap:18px;
 }
 /* MOBILE*/
-@media (max-width: 600px) {
 
-    .hero-title{
-        font-size:52px;
-        letter-spacing:3px;
+   @media (max-width: 600px) {
+
+    .hero-overlay{
+        min-height:auto;
+        padding:20px 12px;
     }
 
-    .hero-tagline{
-        font-size:28px;
-    }
-
-    .hero-subtext{
-        font-size:16px;
-    }
-
-    .appointment-btn{
-        font-size:18px;
-        padding:16px 40px;
+    .hero-content{
+        padding:25px 18px;
+        border-radius:20px;
     }
 
     .hero-logo{
-        width:220px;
+        width:160px;
+        margin-bottom:12px;
     }
+
+    .hero-badge{
+        font-size:12px;
+        padding:8px 16px;
+        margin-bottom:18px;
+    }
+
+    .hero-title{
+        font-size:34px;
+        letter-spacing:2px;
+        margin-bottom:15px;
+        line-height:1.1;
+    }
+
+    .hero-location{
+        font-size:18px;
+        margin-bottom:18px;
+    }
+
+    .hero-tagline{
+        font-size:18px;
+        margin-bottom:18px;
+    }
+
+    .hero-subtext{
+        font-size:14px;
+        line-height:1.6;
+        margin-bottom:25px;
+    }
+
+    .appointment-btn{
+        font-size:16px;
+        padding:14px 30px;
+    }
+
     .service-area-grid{
-    grid-template-columns:
-    repeat(2,1fr);
-}
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 </style>
