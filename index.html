@@ -91,26 +91,18 @@ user-select: none;
     border-radius: 20px;
     backdrop-filter: blur(6px);
 }
+
 .hero-overlay{
-    min-height:85vh;
+    min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
-    padding:40px 20px;
+    align-items:flex-start;
+    padding:60px 20px 40px;
 }
-  
-.hero-content{
-    max-width:700px;
+  .hero-content{
+    max-width:760px;
+    width:100%;
     text-align:center;
-
-    background:none;
-    backdrop-filter:none;
-
-    border-radius:0;
-
-    padding:10px 20px;
-
-    box-shadow:none;
 }
 
 
@@ -131,20 +123,19 @@ user-select: none;
 }
 
 .hero-title{
-    font-size:clamp(60px,7vw,78px);
-    font-weight:700;
-    line-height:1;
+    font-size:clamp(62px,8vw,86px);
+    line-height:.95;
     letter-spacing:4px;
     margin:0;
+    font-weight:700;
 }
 
 .hero-small{
     display:block;
-    font-size:34%;
-    letter-spacing:8px;
     margin-top:18px;
+    font-size:32%;
     font-weight:500;
-    text-transform:uppercase;
+    letter-spacing:8px;
 }
 
 .hero-divider{
@@ -152,15 +143,15 @@ user-select: none;
     justify-content:center;
     align-items:center;
     gap:18px;
-    margin:40px 0;
-    color:#c8a860;
-    font-size:16px;
+    margin:42px 0;
+    color:#C9A760;
+    font-size:18px;
 }
 
 .hero-divider span{
-    width:120px;
+    width:130px;
     height:1px;
-    background:#d8bf86;
+    background:#D7BE86;
 }
 
 .hero-footer{
@@ -205,15 +196,15 @@ user-select: none;
 }
 
 .hero-logo{
-    width:180px;
+    width:210px;
     display:block;
-    margin:0 auto 35px;
+    margin:0 auto 30px;
 }
 
     .hero-location{
-    font-size:20px;
+    font-size:24px;
     letter-spacing:2px;
-    line-height:1.9;
+    line-height:1.8;
     margin-bottom:55px;
 }
 
@@ -276,15 +267,15 @@ A heavenly clean for every home and office.
 </div>
 
 .hero-footer{
-    margin-top:60px;
-    color:#777;
+    margin-top:55px;
 }
 
 .hero-footer p{
+    color:#666;
     font-size:18px;
     line-height:1.8;
-    max-width:550px;
-    margin:12px auto 0;
+    max-width:520px;
+    margin:auto;
 }
 
 .hero-footer{
@@ -715,9 +706,11 @@ A heavenly clean for every home and office.
     }
 
     .hero-badge{
-        font-size:12px;
-        padding:8px 16px;
-        margin-bottom:18px;
+      font-size:15px;
+      letter-spacing:8px;
+      color:#444;
+      margin-bottom:55px;
+      text-transform:uppercase;
     }
 
     .hero-title{
