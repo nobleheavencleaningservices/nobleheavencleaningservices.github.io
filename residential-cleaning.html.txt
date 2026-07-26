@@ -905,7 +905,7 @@ San Fernando Valley & Surrounding Areas
             <div class="about-left">
 
                 <div class="small-heading">
-                    ABOUT US
+                    RESIDENTIAL CLEANING
                 </div>
 
                 <h2 class="about-title">
