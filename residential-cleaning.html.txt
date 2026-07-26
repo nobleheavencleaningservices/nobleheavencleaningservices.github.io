@@ -856,7 +856,7 @@ h1 {
             </div>
 
             <h1 class="hero-title">
-                NOBLE HEAVEN
+                RESIDENTIAL 
                 <span class="hero-small">
                     CLEANING SERVICES
                 </span>
@@ -870,7 +870,9 @@ h1 {
 
             <div class="hero-location">
                 Serving<br>
-                San Fernando Valley & Los Angeles
+               Professional House Cleaning
+Throughout
+San Fernando Valley & Surrounding Areas 
             </div>
 
             <div class="hero-buttons">
