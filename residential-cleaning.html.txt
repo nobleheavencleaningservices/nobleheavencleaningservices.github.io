@@ -883,8 +883,7 @@ San Fernando Valley & Surrounding Areas
 
             <div class="hero-footer">
                 <p>
-                    A heavenly clean for every home and office.
-                </p>
+                   Professional residential cleaning for homes, apartments, condos, and townhomes.</p>
             </div>
 
         </div>
