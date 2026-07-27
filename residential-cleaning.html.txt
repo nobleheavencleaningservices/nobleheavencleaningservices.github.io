@@ -909,21 +909,17 @@ San Fernando Valley & Surrounding Areas
                 </div>
 
                 <h2 class="about-title">
-                    Who are we?
+                    Professional House Cleaning
                 </h2>
 
                 <div class="gold-line"></div>
 
                 <p class="about-description">
-                    Noble Heaven Cleaning Services was built from a passion
-                    for excellence, integrity, and creating peaceful,
-                    beautifully clean spaces for the people we serve.
+                    Whether you need recurring cleaning, a deep clean, or help preparing your home before moving in or after moving out, Noble Heaven provides detailed residential cleaning tailored to your needs. We clean houses, apartments, condominiums, and townhomes with exceptional care and attention to detail.
                 </p>
 
                 <p class="about-description">
-                    We provide residential and commercial cleaning
-                    with reliable care, attention to detail, and consistent
-                    results you can truly feel.
+                    Our residential cleaning services include kitchens, bathrooms, bedrooms, living areas, dusting, vacuuming, mopping, and detailed surface cleaning. Every visit is completed with professionalism, consistency, and respect for your home so you can enjoy a beautifully clean space.
                 </p>
 
             </div>
