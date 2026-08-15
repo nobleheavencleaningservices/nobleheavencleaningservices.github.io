@@ -6,9 +6,8 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>
-Residential House Cleaning Services in San Fernando Valley | Noble Heaven
-</title>
+<title>Residential Cleaning Services in San Fernando Valley | Noble Heaven</title>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -18,24 +17,37 @@ Residential House Cleaning Services in San Fernando Valley | Noble Heaven
 
 
 <meta name="description"
-content="Professional residential house cleaning services in Pasadena, Glendale, Burbank, Studio City, Sherman Oaks, and surrounding communities. Request your free estimate today.">
+content="Professional residential cleaning services in the San Fernando Valley and surrounding areas. Noble Heaven provides recurring, deep, move-in, and move-out cleaning for homes, apartments, condos, and townhomes. Request a free estimate today.">
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"CleaningService",
-  "name":"Noble Heaven Cleaning Services",
-  "url":"https://nobleheaven.com",
-  "telephone":"+1-435-565-1174",
-  "areaServed":[
+  "@context": "https://schema.org",
+  "@type": "CleaningService",
+  "name": "Noble Heaven Cleaning Services",
+  "url": "https://nobleheaven.com",
+  "telephone": "+1-435-565-1174",
+  "email": "nobleheaven.cleaningservices@gmail.com",
+  "areaServed": [
+    "San Fernando Valley",
     "Pasadena",
+    "San Marino",
+    "South Pasadena",
     "Glendale",
     "Burbank",
-    "Sherman Oaks"
+    "Studio City",
+    "Sherman Oaks",
+    "Encino",
+    "Toluca Lake",
+    "Woodland Hills",
+    "Calabasas",
+    "Agoura Hills",
+    "Thousand Oaks",
+    "North Hollywood",
+    "Valley Village",
+    "La Cañada Flintridge"
   ]
 }
 </script>
-
 <style>
     
 * { box-sizing: border-box; }
@@ -43,8 +55,9 @@ content="Professional residential house cleaning services in Pasadena, Glendale,
 body {
     margin: 0;
     font-family: 'Inter', Arial, sans-serif;
-    background: url("background.JPG") no-repeat center center fixed;
+    background: url("background.JPG.jpeg") no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
     color: #000;
 }
 
@@ -417,6 +430,64 @@ h1 {
     margin-bottom:100px;
 }
 
+/* RESIDENTIAL SERVICES */
+
+.residential-services-section{
+    margin-bottom:100px;
+}
+
+.residential-services-title{
+    text-align:center;
+    margin-top:10px;
+}
+
+.services-intro{
+    max-width:700px;
+    margin:0 auto 45px;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+}
+
+.residential-services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.residential-service-card{
+    background:rgba(255,255,255,0.82);
+    border:1px solid rgba(216,191,134,0.18);
+    backdrop-filter:blur(8px);
+    padding:35px 25px;
+    border-radius:24px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.residential-service-card:hover{
+    transform:translateY(-6px);
+}
+
+.residential-service-card h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:28px;
+    font-weight:500;
+    margin:0 0 15px;
+    color:#222;
+}
+
+.residential-service-card p{
+    font-size:15px;
+    line-height:1.7;
+    color:#444;
+    margin:0;
+}
+
 .promise-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -562,12 +633,15 @@ h1 {
     transform:translateY(-4px);
 }
 
-
 @media (max-width:900px){
 
  .about-grid{
     grid-template-columns:1fr;
     gap:35px;
+}
+
+ .residential-services-grid{
+    grid-template-columns:repeat(2,1fr);
 }
 
     .about-title{
@@ -579,6 +653,7 @@ h1 {
         text-align:center;
     }
 }
+
 .about-right{
     margin-top:30px;
 }
@@ -632,14 +707,19 @@ h1 {
 
 .form-box button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin-top: 10px;
     border: none;
     border-radius: 25px;
-    background: #5a9ed8;
+    background: linear-gradient(
+        180deg,
+        #d8bf86,
+        #b89655
+    );
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
+    letter-spacing:1px;
 }
 
 .form-box .close {
@@ -802,6 +882,18 @@ h1 {
 
     .service-area-grid{
         grid-template-columns:repeat(2,1fr);
+    .residential-services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-intro{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .residential-service-card{
+        padding:30px 22px;
+    }
     }
 }
 .hero-divider{
@@ -852,7 +944,7 @@ h1 {
             <img src="nobleheaven.png.PNG" class="hero-logo">
 
             <div class="hero-badge">
-                • Heavenly Clean • Residential • Commercial •
+                • Residential • One-Time • Recurring
             </div>
 
             <h1 class="hero-title">
@@ -869,11 +961,10 @@ h1 {
             </div>
 
             <div class="hero-location">
-                Serving<br>
-               Professional House Cleaning
-Throughout
-San Fernando Valley & Surrounding Areas 
-            </div>
+              PROFESSIONAL HOUSE CLEANING<br>
+         THROUGHOUT THE SAN FERNANDO VALLEY<br>
+                & SURROUNDING AREAS
+      </div>
 
             <div class="hero-buttons">
                 <div class="appointment-btn" onclick="openForm()">
@@ -881,10 +972,11 @@ San Fernando Valley & Surrounding Areas
                 </div>
             </div>
 
-            <div class="hero-footer">
-                <p>
-                   Professional residential cleaning for homes, apartments, condos, and townhomes.</p>
-            </div>
+           <div class="hero-footer">
+    <p>
+        Thoughtful residential cleaning for homes, apartments, condos, and townhomes — tailored to your space and your needs.
+    </p>
+</div>
 
         </div>
 
@@ -930,6 +1022,56 @@ San Fernando Valley & Surrounding Areas
 
         </div>
 
+        <!-- RESIDENTIAL SERVICES -->
+
+        <div class="residential-services-section">
+
+            <div class="small-heading center">
+                OUR SERVICES
+            </div>
+
+            <h2 class="about-title residential-services-title">
+                Cleaning for Every Home
+            </h2>
+
+            <p class="services-intro">
+                From routine upkeep to detailed deep cleaning, Noble Heaven offers residential cleaning services designed around the way you live.
+            </p>
+
+            <div class="residential-services-grid">
+
+                <div class="residential-service-card">
+                    <h3>Recurring Cleaning</h3>
+                    <p>
+                        Keep your home consistently clean with a recurring cleaning schedule tailored to your needs.
+                    </p>
+                </div>
+
+                <div class="residential-service-card">
+                    <h3>Deep Cleaning</h3>
+                    <p>
+                        A more detailed clean focused on built-up dust, grime, surfaces, and areas that need extra attention.
+                    </p>
+                </div>
+
+                <div class="residential-service-card">
+                    <h3>Move-In Cleaning</h3>
+                    <p>
+                        Start fresh in your new home with a detailed cleaning before you settle in.
+                    </p>
+                </div>
+
+                <div class="residential-service-card">
+                    <h3>Move-Out Cleaning</h3>
+                    <p>
+                        Leave your home looking its best with a thorough cleaning before handing over the space.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
         <!-- PROMISE SECTION -->
         <div class="promise-section">
 
@@ -956,8 +1098,9 @@ San Fernando Valley & Surrounding Areas
                 <div class="promise-card">
                     <div class="promise-icon">✦</div>
                     <h3>Safe & Responsible</h3>
-                    <p>Thoughtful cleaning practices that are safe
-                    for families, pets, and offices.</p>
+                    <p>
+    Thoughtful cleaning practices with respect for your home, family, pets, and belongings.
+</p>
                 </div>
 
                 <div class="promise-card">
@@ -1062,15 +1205,26 @@ San Fernando Valley & Surrounding Areas
 <!-- FORM -->
 <div id="appointmentForm" class="form-overlay" onclick="closeForm()">
     <div class="form-box" onclick="event.stopPropagation()">
-        <h2>Request a Free Estimate</h2>
+       <h2>Request a Free Estimate</h2>
+
+<p style="color:#555;line-height:1.6;">
+    Tell us a little about your home and the cleaning you need. We'll get back to you with more information about your estimate.
+</p>
 
         <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
+           <input type="text" name="name" placeholder="Full Name" required>
 
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <textarea name="message" rows="4" placeholder="Tell us about your cleaning needs"></textarea>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="property" placeholder="Property Type (House, Apartment, Condo, etc.)">
+
+<input type="text" name="service" placeholder="Cleaning Service Needed">
+
+<input type="text" name="frequency" placeholder="Preferred Frequency (One-Time, Weekly, Biweekly, Monthly)">
+
+<textarea name="message" rows="4" placeholder="Tell us about your cleaning needs"></textarea>
 
             <button type="submit">Submit</button>
             <button type="button" class="close" onclick="closeForm()">Close</button>
