@@ -926,29 +926,39 @@ h1 {
     }
 }
 
-</style>
-</head>
-  /* =========================================
-   HOMEPAGE HERO — ABOVE THE FOLD
-   ========================================= */
+/* =========================================
+   HOMEPAGE HERO — FINAL RESPONSIVE SPACING
+========================================= */
 
+/* DESKTOP */
 @media (min-width: 601px) {
 
     .hero-overlay {
+        min-height: 100vh;
         padding: 35px 20px 30px;
+    }
+
+    .hero-content {
+        max-width: 760px;
+        width: 100%;
+        text-align: center;
     }
 
     .hero-logo {
         width: 180px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
     }
 
     .hero-badge {
         margin-bottom: 35px;
+        font-size: 14px;
+        letter-spacing: 7px;
+        line-height: 1.5;
     }
 
     .hero-title {
         font-size: clamp(76px, 8.5vw, 96px);
+        line-height: .88;
     }
 
     .hero-divider {
@@ -960,10 +970,6 @@ h1 {
         line-height: 1.6;
         letter-spacing: 4px;
         margin-bottom: 24px;
-    }
-
-    .hero-buttons {
-        margin-top: 0;
     }
 
     .appointment-btn {
@@ -983,7 +989,88 @@ h1 {
 }
 
 
+/* =========================================
+   MOBILE
+========================================= */
 
+@media (max-width: 600px) {
+
+    .hero-overlay {
+        min-height: 100svh;
+        padding: 22px 16px 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-logo {
+        width: 135px;
+        margin: 0 auto 16px;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+        line-height: 1.6;
+        margin: 0 auto 24px;
+        max-width: 330px;
+    }
+
+    .hero-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 54px;
+        font-weight: 500;
+        line-height: .9;
+        letter-spacing: 0;
+        margin: 0;
+    }
+
+    .hero-small {
+        display: block;
+        margin-top: 18px;
+        font-size: 27%;
+        letter-spacing: 6px;
+        line-height: 1;
+    }
+
+    .hero-divider {
+        margin: 22px 0;
+        gap: 10px;
+    }
+
+    .hero-divider span {
+        width: 55px;
+    }
+
+    .hero-location {
+        font-size: 15px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .appointment-btn {
+        display: inline-block;
+        padding: 13px 25px;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .hero-footer {
+        margin-top: 18px;
+    }
+
+    .hero-footer p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+}
+  
 </style>
 </head>
 
