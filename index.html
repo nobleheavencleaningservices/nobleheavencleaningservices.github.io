@@ -1,28 +1,27 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
 content="Professional residential and commercial cleaning services serving San Fernando Valley & Los Angeles.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"CleaningService",
-  "name":"Noble Heaven Cleaning Services",
-  "url":"https://nobleheaven.com",
-  "telephone":"+1-435-565-1174",
-  "areaServed":[
+  "@context": "https://schema.org",
+  "@type": "CleaningService",
+  "name": "Noble Heaven Cleaning Services",
+  "url": "https://nobleheaven.com",
+  "telephone": "+1-435-565-1174",
+  "areaServed": [
     "Pasadena",
     "Glendale",
     "Burbank",
@@ -32,8 +31,956 @@ content="Professional residential and commercial cleaning services serving San F
 </script>
 
 <style>
-    
-* { box-sizing: border-box; }
+
+/* ===== GLOBAL ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: url("background.JPG.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: #000;
+}
+
+.section {
+    display: none;
+    min-height: 65vh;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section.active {
+    display: block;
+}
+
+
+/* ===== HAMBURGER ===== */
+
+.hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    cursor: pointer;
+    z-index: 2000;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    user-select: none;
+}
+
+
+/* ===== HOMEPAGE ===== */
+
+.hero-overlay {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 35px 20px 30px;
+}
+
+.hero-content {
+    max-width: 760px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-logo {
+    width: 180px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.hero-badge {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 7px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 35px;
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(76px, 8.5vw, 96px);
+    font-weight: 500;
+    line-height: .88;
+    letter-spacing: 1px;
+    color: #202020;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-small {
+    display: block;
+    margin-top: 22px;
+    font-size: 28%;
+    font-weight: 400;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+}
+
+.hero-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 28px 0;
+    color: #C9A760;
+    font-size: 18px;
+}
+
+.hero-divider span {
+    width: 130px;
+    height: 1px;
+    background: #D7BE86;
+}
+
+.hero-location {
+    font-size: 19px;
+    line-height: 1.6;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 24px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.appointment-btn {
+    display: inline-block;
+    padding: 17px 60px;
+    background: linear-gradient(180deg, #d8bf86, #b89655);
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+}
+
+.appointment-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+}
+
+.hero-footer {
+    margin-top: 22px;
+    color: #b89655;
+}
+
+.hero-footer p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+
+/* ===== ABOUT ===== */
+
+#about {
+    background: url("about-bg.JPG") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.about-left {
+    text-align: left;
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(216,191,134,0.15);
+    backdrop-filter: blur(16px);
+    padding: 60px;
+    border-radius: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.about-right {
+    margin-top: 30px;
+}
+
+.about-main-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 40px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.small-heading {
+    color: #b89655;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.small-heading.center {
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.gold-line {
+    width: 120px;
+    height: 2px;
+    background: #d8bf86;
+    margin-bottom: 30px;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+
+/* ===== PROMISE ===== */
+
+.promise-section {
+    margin-bottom: 100px;
+}
+
+.promise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.promise-card {
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(216,191,134,0.18);
+    backdrop-filter: blur(6px);
+    padding: 35px 25px;
+    border-radius: 24px;
+    text-align: center;
+    line-height: 1.7;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.promise-card:hover {
+    transform: translateY(-6px);
+}
+
+.promise-icon {
+    font-size: 32px;
+    color: #c9a760;
+    margin-bottom: 15px;
+}
+
+.promise-card h3 {
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+
+/* ===== SERVICE AREAS ===== */
+
+.service-area-section {
+    margin-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-area-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    gap: 18px;
+}
+
+.service-area-grid div {
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(216,191,134,0.18);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-area-grid div:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ===== GALLERY ===== */
+
+.gallery-section {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    padding: 0 20px 80px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ===== ABOUT CTA ===== */
+
+.about-cta {
+    background: rgba(255,255,255,0.90);
+    border: 1px solid rgba(216,191,134,0.18);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.about-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.about-cta p {
+    font-size: 18px;
+    color: #444;
+}
+
+
+/* ===== FORM ===== */
+
+.form-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 3000;
+}
+
+.form-box {
+    background: white;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: left;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #5a9ed8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-box .close {
+    background: #999;
+}
+
+
+/* ===== MENU ===== */
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    z-index: 1500;
+}
+
+.menu-box {
+    width: 92%;
+    max-width: 450px;
+    margin: 60px auto;
+    background: rgba(30,30,30,0.88);
+    color: white;
+    border-radius: 22px;
+    padding: 45px 30px;
+    text-align: center;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.menu-box h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.menu-link {
+    font-size: 22px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.menu-link:hover {
+    transform: translateX(4px);
+    color: #d8bf86;
+}
+
+.menu-link.active {
+    text-decoration: underline;
+}
+
+.menu-contact {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+    font-size: 17px;
+    transition: all 0.5s ease;
+}
+
+.contact-item img {
+    width: 26px;
+}
+
+.contact-item:hover {
+    transform: translateX(6px);
+    opacity: 0.95;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-title {
+        font-size: 54px;
+    }
+
+    .about-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hamburger {
+        width: 55px;
+        height: 55px;
+        font-size: 42px;
+    }
+
+    .hero-overlay {
+        min-height: 100svh;
+        padding: 22px 16px 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-logo {
+        width: 135px;
+        margin: 0 auto 16px;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+        line-height: 1.6;
+        margin: 0 auto 24px;
+        max-width: 330px;
+    }
+
+    .hero-title {
+        font-size: 54px;
+        line-height: .9;
+        letter-spacing: 0;
+    }
+
+    .hero-small {
+        margin-top: 18px;
+        font-size: 27%;
+        letter-spacing: 6px;
+        line-height: 1;
+    }
+
+    .hero-divider {
+        margin: 22px 0;
+        gap: 10px;
+    }
+
+    .hero-divider span {
+        width: 55px;
+    }
+
+    .hero-location {
+        font-size: 15px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .appointment-btn {
+        padding: 13px 25px;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .hero-footer {
+        margin-top: 18px;
+    }
+
+    .hero-footer p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .service-area-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="hamburger" onclick="openMenu()">☰</div>
+
+
+<!-- HOME -->
+
+<div id="home" class="section active">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            <img src="nobleheaven.png.PNG" class="hero-logo">
+
+            <div class="hero-badge">
+                • Heavenly Clean • Residential • Commercial •
+            </div>
+
+            <h1 class="hero-title">
+                NOBLE HEAVEN
+                <span class="hero-small">
+                    CLEANING SERVICES
+                </span>
+            </h1>
+
+            <div class="hero-divider">
+                <span></span>
+                ✦
+                <span></span>
+            </div>
+
+            <div class="hero-location">
+                Serving<br>
+                San Fernando Valley & Los Angeles
+            </div>
+
+            <div class="hero-buttons">
+                <div class="appointment-btn" onclick="openForm()">
+                    Request a Free Estimate
+                </div>
+            </div>
+
+            <div class="hero-footer">
+                <p>
+                    A heavenly clean for every home and office.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<div id="about" class="section">
+
+    <div class="about-wrapper">
+
+        <div class="about-grid">
+
+            <div class="about-left">
+
+                <div class="small-heading">
+                    ABOUT US
+                </div>
+
+                <h2 class="about-title">
+                    Who are we?
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p class="about-description">
+                    Noble Heaven Cleaning Services was built from a passion
+                    for excellence, integrity, and creating peaceful,
+                    beautifully clean spaces for the people we serve.
+                </p>
+
+                <p class="about-description">
+                    We provide residential and commercial cleaning
+                    with reliable care, attention to detail, and consistent
+                    results you can truly feel.
+                </p>
+
+            </div>
+
+            <div class="about-right">
+                <img src="about-hero.JPG.PNG" class="about-main-image">
+            </div>
+
+        </div>
+
+
+        <!-- PROMISE -->
+
+        <div class="promise-section">
+
+            <div class="small-heading center">
+                OUR PROMISE
+            </div>
+
+            <div class="promise-grid">
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+                    <h3>Exceptional Quality</h3>
+                    <p>
+                        Every detail matters. We deliver spotless,
+                        polished results every time.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+                    <h3>Trust & Reliability</h3>
+                    <p>
+                        Professional service you can depend on with
+                        respect for your space and time.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+                    <h3>Safe & Responsible</h3>
+                    <p>
+                        Thoughtful cleaning practices that are safe
+                        for families, pets, and offices.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+                    <h3>Customer Focused</h3>
+                    <p>
+                        Your satisfaction always comes first and we
+                        strive to exceed expectations.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICE AREAS -->
+
+        <div class="service-area-section">
+
+            <div class="small-heading center">
+                SERVICE AREAS
+            </div>
+
+            <h2 class="about-title" style="font-size:60px;text-align:center;">
+                Proudly Serving
+            </h2>
+
+            <div class="service-area-grid">
+
+                <div>Pasadena</div>
+                <div>San Marino</div>
+                <div>South Pasadena</div>
+                <div>Glendale</div>
+                <div>Burbank</div>
+                <div>Studio City</div>
+                <div>Sherman Oaks</div>
+                <div>Encino</div>
+                <div>Toluca Lake</div>
+                <div>Woodland Hills</div>
+                <div>Calabasas</div>
+                <div>Agoura Hills</div>
+                <div>Thousand Oaks</div>
+                <div>North Hollywood</div>
+                <div>Valley Village</div>
+                <div>La Cañada Flintridge</div>
+
+            </div>
+
+
+            <!-- GALLERY -->
+
+            <div class="gallery-section">
+
+                <div class="small-heading center">
+                    GALLERY
+                </div>
+
+                <div class="gallery">
+
+                    <img src="gallery1.png">
+                    <img src="gallery2.PNG">
+                    <img src="gallery3.JPG.jpg">
+                    <img src="gallery4.JPG.JPG">
+                    <img src="gallery5.jpg">
+                    <img src="gallery6.jpg">
+                    <img src="gallery7.jpg">
+                    <img src="gallery8.jpg">
+                    <img src="gallery9.jpg">
+                    <img src="gallery10.jpg">
+                    <img src="gallery11.jpg">
+                    <img src="gallery12.PNG">
+                    <img src="gallery13.PNG">
+                    <img src="gallery14.PNG">
+
+                </div>
+
+            </div>
+
+
+            <!-- CTA -->
+
+            <div class="about-cta">
+
+                <div>
+                    <h2>Ready for a Heavenly Clean?</h2>
+
+                    <p>
+                        We'd love to help. Request your free estimate today.
+                    </p>
+                </div>
+
+                <div class="appointment-btn" onclick="openForm()">
+                    Request a Free Estimate
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FORM -->
+
+<div id="appointmentForm" class="form-overlay" onclick="closeForm()">
+
+    <div class="form-box" onclick="event.stopPropagation()">
+
+        <h2>Request a Free Estimate</h2>
+
+        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com" method="POST">
+
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="text" name="name" placeholder="Name" required>
+
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <textarea name="message" rows="4"
+            placeholder="Tell us about your cleaning needs"></textarea>
+
+            <button type="submit">Submit</button>
+
+            <button type="button" class="close" onclick="closeForm()">
+                Close
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- MENU -->
+
+<div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
+
+    <div class="menu-box" onclick="event.stopPropagation()">
+
+        <h2>NOBLE HEAVEN</h2>
+
+        <div class="menu-link active" onclick="showHome()">
+            Home
+        </div>
+
+        <div class="menu-link" onclick="showAbout()">
+            About us
+        </div>
+
+        <div class="menu-contact">
+
+            <a href="tel:4355651174"
+               class="contact-item"
+               style="color:white;text-decoration:none;">
+                <img src="phone.PNG">
+                <span>(435) 565-1174</span>
+            </a>
+
+            <a href="https://www.instagram.com/nobleheaven.cleaningservices?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+               target="_blank"
+               class="contact-item"
+               style="color:white;text-decoration:none;">
+                <img src="instagram .PNG">
+                <span>@Nobleheavencleaningservices</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61590302324697&mibextid=wwXIfr"
+               target="_blank"
+               class="contact-item"
+               style="color:white;text-decoration:none;">
+                <img src="Facebook.PNG">
+                <span>Noble Heaven Cleaning Services</span>
+            </a>
+
+            <a href="mailto:nobleheaven.cleaningservices@gmail.com"
+               class="contact-item"
+               style="color:white;text-decoration:none;">
+                <img src="email.PNG">
+                <span>nobleheaven.cleaningservices@gmail.com</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openMenu() {
+    document.getElementById("menuOverlay").style.display = "block";
+}
+
+function closeMenu() {
+    document.getElementById("menuOverlay").style.display = "none";
+}
+
+function showHome() {
+    document.getElementById("home").classList.add("active");
+    document.getElementById("about").classList.remove("active");
+    closeMenu();
+}
+
+function showAbout() {
+    document.getElementById("about").classList.add("active");
+    document.getElementById("home").classList.remove("active");
+    closeMenu();
+}
+
+function openForm() {
+    document.getElementById("appointmentForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("appointmentForm").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
+```
 
 body {
     margin: 0;
