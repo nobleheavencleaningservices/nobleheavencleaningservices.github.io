@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Learn about Noble Heaven Cleaning Services and our commitment to reliable, detailed residential and commercial cleaning across San Fernando Valley and Los Angeles.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #000;
+    background: url("about-bg.JPG") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* ===== HAMBURGER ===== */
+
+.hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    cursor: pointer;
+    z-index: 2000;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    user-select: none;
+}
+
+
+/* ===== ABOUT PAGE ===== */
+
+.about-page {
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ===== TOP ABOUT SECTION ===== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.about-left {
+    text-align: left;
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(216,191,134,0.15);
+    backdrop-filter: blur(16px);
+    padding: 60px;
+    border-radius: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.about-right {
+    margin-top: 30px;
+}
+
+.about-main-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 40px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.small-heading {
+    color: #b89655;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.small-heading.center {
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin: 0 0 20px;
+    color: #222;
+}
+
+.gold-line {
+    width: 120px;
+    height: 2px;
+    background: #d8bf86;
+    margin-bottom: 30px;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+
+/* ===== PROMISE ===== */
+
+.promise-section {
+    margin-bottom: 100px;
+}
+
+.promise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.promise-card {
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(216,191,134,0.18);
+    backdrop-filter: blur(6px);
+    padding: 35px 25px;
+    border-radius: 24px;
+    text-align: center;
+    line-height: 1.7;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.promise-card:hover {
+    transform: translateY(-6px);
+}
+
+.promise-icon {
+    font-size: 32px;
+    color: #c9a760;
+    margin-bottom: 15px;
+}
+
+.promise-card h3 {
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+
+/* ===== SERVICE AREAS ===== */
+
+.service-area-section {
+    margin-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-area-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: #222;
+    margin: 0;
+}
+
+.service-area-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    gap: 18px;
+}
+
+.service-area-grid div {
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(216,191,134,0.18);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-area-grid div:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ===== GALLERY ===== */
+
+.gallery-section {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    padding: 0 20px 80px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ===== CTA ===== */
+
+.about-cta {
+    background: rgba(255,255,255,0.90);
+    border: 1px solid rgba(216,191,134,0.18);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.about-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    margin: 0 0 10px;
+}
+
+.about-cta p {
+    font-size: 18px;
+    color: #444;
+}
+
+
+/* ===== ESTIMATE BUTTON ===== */
+
+.appointment-btn {
+    display: inline-block;
+    padding: 17px 60px;
+    background: linear-gradient(180deg, #d8bf86, #b89655);
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    text-decoration: none;
+}
+
+.appointment-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+}
+
+
+/* ===== MENU ===== */
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    z-index: 1500;
+}
+
+.menu-box {
+    width: 92%;
+    max-width: 450px;
+    margin: 60px auto;
+    background: rgba(30,30,30,0.88);
+    color: white;
+    border-radius: 22px;
+    padding: 45px 30px;
+    text-align: center;
+}
+
+.menu-box h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.menu-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.menu-link:hover {
+    transform: translateX(4px);
+    color: #d8bf86;
+}
+
+.menu-link.active {
+    text-decoration: underline;
+}
+
+.menu-contact {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.contact-item img {
+    width: 26px;
+}
+
+.contact-item:hover {
+    transform: translateX(6px);
+    opacity: 0.95;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-title {
+        font-size: 54px;
+    }
+
+    .about-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hamburger {
+        width: 55px;
+        height: 55px;
+        font-size: 42px;
+    }
+
+    .about-page {
+        padding: 40px 16px;
+    }
+
+    .about-left {
+        padding: 35px 25px;
+    }
+
+    .about-title {
+        font-size: 48px;
+    }
+
+    .about-description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .service-area-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-area-title {
+        font-size: 48px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 0 60px;
+    }
+
+    .gallery img {
+        height: 200px;
+    }
+
+    .about-cta {
+        padding: 40px 25px;
+    }
+
+    .about-cta h2 {
+        font-size: 40px;
+    }
+
+    .appointment-btn {
+        padding: 13px 25px;
+        font-size: 15px;
+    }
+
+    .menu-box {
+        margin-top: 80px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HAMBURGER -->
+
+<div class="hamburger" onclick="openMenu()">☰</div>
+
+
+<!-- ABOUT PAGE -->
+
+<main class="about-page">
+
+    <div class="about-wrapper">
+
+
+        <!-- ABOUT -->
+
+        <section class="about-grid">
+
+            <div class="about-left">
+
+                <div class="small-heading">
+                    ABOUT US
+                </div>
+
+                <h1 class="about-title">
+                    Who are we?
+                </h1>
+
+                <div class="gold-line"></div>
+
+                <p class="about-description">
+                    Noble Heaven Cleaning Services was built from a passion
+                    for excellence, integrity, and creating peaceful,
+                    beautifully clean spaces for the people we serve.
+                </p>
+
+                <p class="about-description">
+                    We provide residential and commercial cleaning
+                    with reliable care, attention to detail, and consistent
+                    results you can truly feel.
+                </p>
+
+            </div>
+
+            <div class="about-right">
+                <img src="about-hero.JPG.PNG"
+                     class="about-main-image"
+                     alt="Noble Heaven Cleaning Services">
+            </div>
+
+        </section>
+
+
+        <!-- PROMISE -->
+
+        <section class="promise-section">
+
+            <div class="small-heading center">
+                OUR PROMISE
+            </div>
+
+            <div class="promise-grid">
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+
+                    <h2>Exceptional Quality</h2>
+
+                    <p>
+                        Every detail matters. We deliver spotless,
+                        polished results every time.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+
+                    <h2>Trust & Reliability</h2>
+
+                    <p>
+                        Professional service you can depend on with
+                        respect for your space and time.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+
+                    <h2>Safe & Responsible</h2>
+
+                    <p>
+                        Thoughtful cleaning practices that are safe
+                        for families, pets, and offices.
+                    </p>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">✦</div>
+
+                    <h2>Customer Focused</h2>
+
+                    <p>
+                        Your satisfaction always comes first and we
+                        strive to exceed expectations.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICE AREAS -->
+
+        <section class="service-area-section">
+
+            <div class="small-heading center">
+                SERVICE AREAS
+            </div>
+
+            <h2 class="service-area-title">
+                Proudly Serving
+            </h2>
+
+            <div class="service-area-grid">
+
+                <div>Pasadena</div>
+                <div>San Marino</div>
+                <div>South Pasadena</div>
+                <div>Glendale</div>
+                <div>Burbank</div>
+                <div>Studio City</div>
+                <div>Sherman Oaks</div>
+                <div>Encino</div>
+                <div>Toluca Lake</div>
+                <div>Woodland Hills</div>
+                <div>Calabasas</div>
+                <div>Agoura Hills</div>
+                <div>Thousand Oaks</div>
+                <div>North Hollywood</div>
+                <div>Valley Village</div>
+                <div>La Cañada Flintridge</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY -->
+
+        <section class="gallery-section">
+
+            <div class="small-heading center">
+                GALLERY
+            </div>
+
+            <div class="gallery">
+
+                <img src="gallery1.png" alt="Noble Heaven cleaning">
+                <img src="gallery2.PNG" alt="Noble Heaven cleaning">
+                <img src="gallery3.JPG.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery4.JPG.JPG" alt="Noble Heaven cleaning">
+                <img src="gallery5.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery6.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery7.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery8.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery9.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery10.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery11.jpg" alt="Noble Heaven cleaning">
+                <img src="gallery12.PNG" alt="Noble Heaven cleaning">
+                <img src="gallery13.PNG" alt="Noble Heaven cleaning">
+                <img src="gallery14.PNG" alt="Noble Heaven cleaning">
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="about-cta">
+
+            <div>
+                <h2>Ready for a Heavenly Clean?</h2>
+
+                <p>
+                    We'd love to help. Request your free estimate today.
+                </p>
+            </div>
+
+            <a href="index.html" class="appointment-btn">
+                Request a Free Estimate
+            </a>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- MENU -->
+
+<div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
+
+    <div class="menu-box" onclick="event.stopPropagation()">
+
+        <h2>NOBLE HEAVEN</h2>
+
+        <a href="index.html" class="menu-link">
+            Home
+        </a>
+
+        <a href="about.html" class="menu-link active">
+            About us
+        </a>
+
+        <div class="menu-contact">
+
+            <a href="tel:4355651174" class="contact-item">
+                <img src="phone.PNG" alt="">
+                <span>(435) 565-1174</span>
+            </a>
+
+            <a href="https://www.instagram.com/nobleheaven.cleaningservices?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-item">
+
+                <img src="instagram .PNG" alt="">
+                <span>@Nobleheavencleaningservices</span>
+
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61590302324697&mibextid=wwXIfr"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-item">
+
+                <img src="Facebook.PNG" alt="">
+                <span>Noble Heaven Cleaning Services</span>
+
+            </a>
+
+            <a href="mailto:nobleheaven.cleaningservices@gmail.com"
+               class="contact-item">
+
+                <img src="email.PNG" alt="">
+                <span>nobleheaven.cleaningservices@gmail.com</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openMenu() {
+    document.getElementById("menuOverlay").style.display = "block";
+}
+
+function closeMenu() {
+    document.getElementById("menuOverlay").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
