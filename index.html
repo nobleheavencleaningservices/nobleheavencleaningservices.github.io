@@ -146,7 +146,9 @@ body {
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
 }
 
 .appointment-btn {
@@ -160,12 +162,106 @@ body {
     letter-spacing: 2px;
     cursor: pointer;
     box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    border: none;
 }
 
 .appointment-btn:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 12px 30px rgba(0,0,0,0.22);
 }
+
+
+/* ===== CONTACT BUTTON ===== */
+
+.contact-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: rgba(255,255,255,0.45);
+    border: 1px solid rgba(184,150,85,0.45);
+    color: #333;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 999px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.contact-toggle:hover {
+    background: rgba(255,255,255,0.7);
+    transform: translateY(-2px);
+}
+
+.contact-arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.contact-toggle.open .contact-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* ===== CONTACT DROPDOWN ===== */
+
+.contact-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s ease, opacity 0.35s ease, margin-top 0.35s ease;
+    width: 100%;
+}
+
+.contact-dropdown.open {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 5px;
+}
+
+.contact-dropdown-inner {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 8px 20px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255,255,255,0.7);
+    transform: translateY(-2px);
+}
+
+.contact-item img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* ===== HERO FOOTER ===== */
 
 .hero-footer {
     margin-top: 22px;
@@ -254,6 +350,9 @@ body {
 }
 
 .menu-link {
+    display: block;
+    color: white;
+    text-decoration: none;
     font-size: 22px;
     margin: 20px 0;
     cursor: pointer;
@@ -267,29 +366,6 @@ body {
 
 .menu-link.active {
     text-decoration: underline;
-}
-
-.menu-contact {
-    margin-top: 50px;
-    text-align: left;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 20px 0;
-    font-size: 17px;
-    transition: all 0.5s ease;
-}
-
-.contact-item img {
-    width: 26px;
-}
-
-.contact-item:hover {
-    transform: translateX(6px);
-    opacity: 0.95;
 }
 
 
@@ -362,6 +438,20 @@ body {
         letter-spacing: 1px;
     }
 
+    .contact-toggle {
+        padding: 11px 25px;
+        font-size: 14px;
+    }
+
+    .contact-dropdown-inner {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .contact-item {
+        font-size: 14px;
+    }
+
     .hero-footer {
         margin-top: 18px;
     }
@@ -378,6 +468,7 @@ body {
 
 <body>
 
+
 <!-- HAMBURGER -->
 
 <div class="hamburger" onclick="openMenu()">☰</div>
@@ -389,7 +480,7 @@ body {
 
     <div class="hero-content">
 
-        <img src="nobleheaven.png.PNG" class="hero-logo">
+        <img src="nobleheaven.png.PNG" class="hero-logo" alt="Noble Heaven Cleaning Services">
 
         <div class="hero-badge">
             • Heavenly Clean • Residential • Commercial •
@@ -397,6 +488,7 @@ body {
 
         <h1 class="hero-title">
             NOBLE HEAVEN
+
             <span class="hero-small">
                 CLEANING SERVICES
             </span>
@@ -413,16 +505,101 @@ body {
             San Fernando Valley & Los Angeles
         </div>
 
+
+        <!-- BUTTONS -->
+
         <div class="hero-buttons">
+
+            <!-- FREE ESTIMATE -->
+
             <div class="appointment-btn" onclick="openForm()">
                 Request a Free Estimate
             </div>
+
+
+            <!-- CONTACT US -->
+
+            <button class="contact-toggle"
+                    id="contactToggle"
+                    onclick="toggleContact()">
+
+                Contact Us
+
+                <span class="contact-arrow">▼</span>
+
+            </button>
+
+
+            <!-- CONTACT DROPDOWN -->
+
+            <div class="contact-dropdown" id="contactDropdown">
+
+                <div class="contact-dropdown-inner">
+
+                    <a href="tel:4355651174"
+                       class="contact-item">
+
+                        <img src="phone.PNG" alt="Phone">
+
+                        <span>
+                            (435) 565-1174
+                        </span>
+
+                    </a>
+
+
+                    <a href="https://www.instagram.com/nobleheaven.cleaningservices?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-item">
+
+                        <img src="instagram .PNG" alt="Instagram">
+
+                        <span>
+                            @Nobleheavencleaningservices
+                        </span>
+
+                    </a>
+
+
+                    <a href="https://www.facebook.com/profile.php?id=61590302324697&mibextid=wwXIfr"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-item">
+
+                        <img src="Facebook.PNG" alt="Facebook">
+
+                        <span>
+                            Noble Heaven Cleaning Services
+                        </span>
+
+                    </a>
+
+
+                    <a href="mailto:nobleheaven.cleaningservices@gmail.com"
+                       class="contact-item">
+
+                        <img src="email.PNG" alt="Email">
+
+                        <span>
+                            nobleheaven.cleaningservices@gmail.com
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
+
         <div class="hero-footer">
+
             <p>
                 A heavenly clean for every home and office.
             </p>
+
         </div>
 
     </div>
@@ -432,29 +609,51 @@ body {
 
 <!-- FORM -->
 
-<div id="appointmentForm" class="form-overlay" onclick="closeForm()">
+<div id="appointmentForm"
+     class="form-overlay"
+     onclick="closeForm()">
 
-    <div class="form-box" onclick="event.stopPropagation()">
+    <div class="form-box"
+         onclick="event.stopPropagation()">
 
         <h2>Request a Free Estimate</h2>
 
-        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com" method="POST">
+        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
+              method="POST">
 
-            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
 
-            <input type="text" name="name" placeholder="Name" required>
+            <input type="text"
+                   name="name"
+                   placeholder="Name"
+                   required>
 
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="tel"
+                   name="phone"
+                   placeholder="Phone Number"
+                   required>
 
-            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="email"
+                   name="email"
+                   placeholder="Email Address"
+                   required>
 
-            <textarea name="message" rows="4"
-            placeholder="Tell us about your cleaning needs"></textarea>
+            <textarea name="message"
+                      rows="4"
+                      placeholder="Tell us about your cleaning needs"></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit">
+                Submit
+            </button>
 
-            <button type="button" class="close" onclick="closeForm()">
+            <button type="button"
+                    class="close"
+                    onclick="closeForm()">
+
                 Close
+
             </button>
 
         </form>
@@ -466,57 +665,30 @@ body {
 
 <!-- MENU -->
 
-<div id="menuOverlay" class="menu-overlay" onclick="closeMenu()">
+<div id="menuOverlay"
+     class="menu-overlay"
+     onclick="closeMenu()">
 
-    <div class="menu-box" onclick="event.stopPropagation()">
+    <div class="menu-box"
+         onclick="event.stopPropagation()">
 
         <h2>NOBLE HEAVEN</h2>
 
-        <a href="index.html"
-           class="menu-link active"
-           style="color:white;text-decoration:none;">
+
+        <a href="/"
+           class="menu-link active">
+
             Home
+
         </a>
+
 
         <a href="about.html"
-           class="menu-link"
-           style="color:white;text-decoration:none;">
+           class="menu-link">
+
             About us
+
         </a>
-
-        <div class="menu-contact">
-
-            <a href="tel:4355651174"
-               class="contact-item"
-               style="color:white;text-decoration:none;">
-                <img src="phone.PNG">
-                <span>(435) 565-1174</span>
-            </a>
-
-            <a href="https://www.instagram.com/nobleheaven.cleaningservices?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
-               target="_blank"
-               class="contact-item"
-               style="color:white;text-decoration:none;">
-                <img src="instagram .PNG">
-                <span>@Nobleheavencleaningservices</span>
-            </a>
-
-            <a href="https://www.facebook.com/profile.php?id=61590302324697&mibextid=wwXIfr"
-               target="_blank"
-               class="contact-item"
-               style="color:white;text-decoration:none;">
-                <img src="Facebook.PNG">
-                <span>Noble Heaven Cleaning Services</span>
-            </a>
-
-            <a href="mailto:nobleheaven.cleaningservices@gmail.com"
-               class="contact-item"
-               style="color:white;text-decoration:none;">
-                <img src="email.PNG">
-                <span>nobleheaven.cleaningservices@gmail.com</span>
-            </a>
-
-        </div>
 
     </div>
 
@@ -525,23 +697,56 @@ body {
 
 <script>
 
+
+/* ===== MENU ===== */
+
 function openMenu() {
+
     document.getElementById("menuOverlay").style.display = "block";
+
 }
+
 
 function closeMenu() {
+
     document.getElementById("menuOverlay").style.display = "none";
+
 }
+
+
+/* ===== ESTIMATE FORM ===== */
 
 function openForm() {
+
     document.getElementById("appointmentForm").style.display = "block";
+
 }
+
 
 function closeForm() {
+
     document.getElementById("appointmentForm").style.display = "none";
+
 }
 
+
+/* ===== CONTACT DROPDOWN ===== */
+
+function toggleContact() {
+
+    const dropdown = document.getElementById("contactDropdown");
+
+    const button = document.getElementById("contactToggle");
+
+    dropdown.classList.toggle("open");
+
+    button.classList.toggle("open");
+
+}
+
+
 </script>
+
 
 </body>
 </html>
