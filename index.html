@@ -722,6 +722,30 @@ function openForm() {
 
 }
 
+<script>
+
+/* ===== MENU ===== */
+
+function openMenu() {
+
+    document.getElementById("menuOverlay").style.display = "block";
+
+}
+
+function closeMenu() {
+
+    document.getElementById("menuOverlay").style.display = "none";
+
+}
+
+
+/* ===== ESTIMATE FORM ===== */
+
+function openForm() {
+
+    document.getElementById("appointmentForm").style.display = "block";
+
+}
 
 function closeForm() {
 
@@ -730,67 +754,17 @@ function closeForm() {
 }
 
 
-<!-- CONTACT DROPDOWN -->
+/* ===== CONTACT DROPDOWN ===== */
 
-<div class="contact-dropdown" id="contactDropdown">
+function toggleContact() {
 
-    <div class="contact-dropdown-inner">
+    const dropdown = document.getElementById("contactDropdown");
+    const button = document.getElementById("contactToggle");
 
-        <a href="tel:+14355651174"
-           class="contact-item">
+    dropdown.classList.toggle("open");
+    button.classList.toggle("open");
 
-            <img src="phone.PNG" alt="Phone">
-
-            <span>
-                (435) 565-1174
-            </span>
-
-        </a>
-
-
-        <a href="https://www.instagram.com/nobleheaven.cleaningservices/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="contact-item">
-
-            <img src="instagram .PNG" alt="Instagram">
-
-            <span>
-                @Nobleheavencleaningservices
-            </span>
-
-        </a>
-
-
-        <a href="https://www.facebook.com/profile.php?id=61590302324697"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="contact-item">
-
-            <img src="Facebook.PNG" alt="Facebook">
-
-            <span>
-                Noble Heaven Cleaning Services
-            </span>
-
-        </a>
-
-
-        <a href="mailto:nobleheaven.cleaningservices@gmail.com"
-           class="contact-item">
-
-            <img src="email.PNG" alt="Email">
-
-            <span>
-                nobleheaven.cleaningservices@gmail.com
-            </span>
-
-        </a>
-
-    </div>
-
-</div>
-
+}
 
 </script>
 
