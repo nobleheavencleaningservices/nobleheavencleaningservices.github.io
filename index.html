@@ -618,12 +618,28 @@ body {
 
         <h2>Request a Free Estimate</h2>
 
-        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
-              method="POST">
+<form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
+      method="POST">
 
-            <input type="hidden"
-                   name="_captcha"
-                   value="false">
+    <!-- Email subject -->
+    <input type="hidden"
+           name="_subject"
+           value="New Cleaning Estimate Request - Noble Heaven">
+
+    <!-- Send email replies directly to the customer's email -->
+    <input type="hidden"
+           name="_replyto"
+           value="">
+
+    <!-- Disable FormSubmit's captcha -->
+    <input type="hidden"
+           name="_captcha"
+           value="false">
+
+    <!-- Use a cleaner email template -->
+    <input type="hidden"
+           name="_template"
+           value="table">
 
             <input type="text"
                    name="name"
