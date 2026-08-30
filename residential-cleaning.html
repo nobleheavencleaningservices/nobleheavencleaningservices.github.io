@@ -1,1 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Residential Cleaning | Noble Heaven Cleaning Services</title>
+
+    <meta name="description"
+        content="Professional residential cleaning services in Panorama City, San Fernando Valley, Simi Valley, Thousand Oaks, and surrounding areas. Routine cleaning, deep cleaning, move-in and move-out cleaning, carpet cleaning, and more.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CleaningService",
+      "name": "Noble Heaven Cleaning Services",
+      "url": "https://nobleheaven.com",
+      "telephone": "+1-435-565-1174",
+      "description": "Professional residential cleaning services serving Panorama City, San Fernando Valley, Simi Valley, Thousand Oaks, and surrounding areas.",
+      "areaServed": [
+        "Panorama City",
+        "San Fernando Valley",
+        "Simi Valley",
+        "Thousand Oaks",
+        "Moorpark",
+        "Newbury Park",
+        "Westlake Village"
+      ]
+    }
+    </script>
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            color: #242424;
+            background:
+                linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
+                url("background.JPG.jpeg") center center / cover fixed;
+        }
+
+        body.menu-open,
+        body.form-open {
+            overflow: hidden;
+        }
+
+        .page-section {
+            width: 100%;
+            padding: 90px 20px;
+        }
+
+        .container {
+            width: min(100%, 1050px);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(40px, 5vw, 58px);
+            line-height: 1;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0 0 16px;
+            color: #252525;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0 auto;
+            max-width: 650px;
+        }
+
+        .gold-line {
+            width: 55px;
+            height: 1px;
+            background: #c6a35d;
+            margin: 22px auto 0;
+        }
+
+
+        /* =========================
+           HAMBURGER
+        ========================= */
+
+        .hamburger {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 5000;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(5px);
+            user-select: none;
+            border: none;
+            color: #222;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 90px 20px 70px;
+            border-bottom: 1px solid rgba(120, 95, 55, 0.12);
+        }
+
+        .hero-inner {
+            width: min(100%, 1080px);
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .hero-copy {
+            padding: 25px 0;
+        }
+
+        .hero-logo-mobile {
+            display: none;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(70px, 9vw, 112px);
+            line-height: 0.82;
+            letter-spacing: 1px;
+            margin: 0 0 30px;
+            color: #222;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-size: 17px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0 0 24px;
+            color: #333;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 500px;
+            color: #555;
+            margin-bottom: 32px;
+        }
+
+        .gold-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 35px;
+            min-width: 270px;
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(180deg, #d8bf86, #b89655);
+            color: white;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .gold-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+        }
+
+        .hero-visual {
+            min-height: 470px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .hero-logo {
+            width: 180px;
+            max-width: 55%;
+            margin-top: 0;
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.08));
+        }
+
+        .hero-visual::after {
+            content: "";
+            position: absolute;
+            width: 85%;
+            height: 55%;
+            bottom: 15px;
+            right: 0;
+            border-radius: 180px 0 0 0;
+            background: rgba(255,255,255,0.20);
+            border: 1px solid rgba(150,120,70,0.12);
+            z-index: -1;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-section {
+            background: rgba(255,255,255,0.16);
+        }
+
+        .accordion-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px 20px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            border: 1px solid rgba(120, 95, 55, 0.20);
+            background: rgba(255,255,255,0.25);
+            transition: background 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .service-card.active {
+            background: rgba(255,255,255,0.50);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .service-toggle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 26px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
+            color: #292929;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+        }
+
+        .service-symbol {
+            flex-shrink: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 23px;
+            font-weight: 300;
+            color: #333;
+        }
+
+        .service-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        .service-content-inner {
+            padding: 0 26px 26px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================
+           WHAT'S INCLUDED
+        ========================= */
+
+        .included-section {
+            border-top: 1px solid rgba(120, 95, 55, 0.10);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .included-column {
+            padding: 0 25px;
+            border-right: 1px solid rgba(120, 95, 55, 0.15);
+        }
+
+        .included-column:last-child {
+            border-right: none;
+        }
+
+        .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .included-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .included-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #b89655;
+            font-weight: 600;
+        }
+
+        .included-note {
+            max-width: 640px;
+            margin: 42px auto 0;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           AREAS
+        ========================= */
+
+        .areas-section {
+            background: rgba(255,255,255,0.16);
+            border-top: 1px solid rgba(120, 95, 55, 0.10);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 55px;
+        }
+
+        .area-column {
+            padding: 0 35px;
+            text-align: center;
+            border-right: 1px solid rgba(120, 95, 55, 0.16);
+        }
+
+        .area-column:last-child {
+            border-right: none;
+        }
+
+        .area-title {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            color: #333;
+        }
+
+        .area-column p {
+            margin: 0;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .travel-note {
+            text-align: center;
+            margin-top: 42px;
+            color: #666;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+
+        /* =========================
+           FINAL CTA
+        ========================= */
+
+        .cta-section {
+            padding: 95px 20px 105px;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(40px, 5vw, 60px);
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin: 0 0 30px;
+            color: #252525;
+        }
+
+        .contact-wrap {
+            margin-top: 28px;
+        }
+
+        .contact-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 30px;
+            background: rgba(255,255,255,0.40);
+            border: 1px solid rgba(184,150,85,0.45);
+            color: #333;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            border-radius: 999px;
+            cursor: pointer;
+            backdrop-filter: blur(8px);
+        }
+
+        .contact-arrow {
+            font-size: 11px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-toggle.open .contact-arrow {
+            transform: rotate(180deg);
+        }
+
+        .contact-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+            width: min(100%, 470px);
+            margin: 0 auto;
+        }
+
+        .contact-dropdown.open {
+            max-height: 300px;
+            opacity: 1;
+            margin-top: 12px;
+        }
+
+        .contact-dropdown-inner {
+            padding: 8px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 12px 15px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.40);
+            border: 1px solid rgba(120, 95, 55, 0.12);
+        }
+
+        .contact-item img {
+            width: 21px;
+            height: 21px;
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .form-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 6000;
+            background: rgba(0, 0, 0, 0.58);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 520px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            background: #fdfcf9;
+            border-radius: 20px;
+            padding: 38px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.30);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 500;
+            margin: 0 0 25px;
+            color: #202020;
+        }
+
+        .form-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-box input,
+        .form-box textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .form-box textarea {
+            resize: vertical;
+        }
+
+        .form-box button[type="submit"] {
+            padding: 15px;
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(180deg, #d8bf86, #b89655);
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .form-box .close {
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 999px;
+            background: white;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.48);
+            backdrop-filter: blur(10px);
+            z-index: 5500;
+            padding: 80px 20px 20px;
+        }
+
+        .menu-box {
+            width: min(100%, 470px);
+            margin: 0 auto;
+            background: rgba(30,30,30,0.93);
+            color: white;
+            border-radius: 22px;
+            padding: 42px 30px;
+            text-align: center;
+        }
+
+        .menu-box h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 500;
+            margin: 0 0 25px;
+        }
+
+        .menu-link {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 18px 0;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .menu-link:hover {
+            color: #d8bf86;
+        }
+
+        .menu-link.active {
+            color: #d8bf86;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .hero {
+                min-height: auto;
+                padding-top: 105px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .hero-copy {
+                order: 2;
+            }
+
+            .hero-visual {
+                order: 1;
+                min-height: auto;
+            }
+
+            .hero-visual::after {
+                display: none;
+            }
+
+            .hero-logo {
+                width: 130px;
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: clamp(62px, 16vw, 88px);
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .accordion-grid,
+            .included-grid,
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .included-column,
+            .area-column {
+                border-right: none;
+                border-bottom: 1px solid rgba(120, 95, 55, 0.15);
+                padding: 20px 5px;
+            }
+
+            .included-column:last-child,
+            .area-column:last-child {
+                border-bottom: none;
+            }
+
+            .areas-grid {
+                gap: 0;
+            }
+
+            .page-section {
+                padding: 70px 18px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hamburger {
+                top: 10px;
+                left: 10px;
+            }
+
+            .eyebrow {
+                letter-spacing: 3px;
+                font-size: 10px;
+            }
+
+            .hero-title {
+                line-height: 0.88;
+            }
+
+            .hero-tagline {
+                font-size: 13px;
+                letter-spacing: 2.5px;
+            }
+
+            .gold-button {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .service-toggle {
+                padding: 20px;
+                font-size: 22px;
+            }
+
+            .service-content-inner {
+                padding: 0 20px 22px;
+            }
+
+            .form-box {
+                padding: 28px 20px;
+            }
+
+            .cta-title {
+                font-size: 42px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- HAMBURGER -->
+
+    <button class="hamburger" type="button" onclick="openMenu()" aria-label="Open menu">
+        ☰
+    </button>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-inner">
+
+            <div class="hero-copy">
+
+                <div class="eyebrow">
+                    • Heavenly Clean • Residential •
+                </div>
+
+                <h1 class="hero-title">
+                    Residential<br>Cleaning
+                </h1>
+
+                <p class="hero-tagline">
+                    A Heavenly Clean for Your Home
+                </p>
+
+                <p class="hero-description">
+                    Thoughtful, reliable cleaning services tailored to your home and lifestyle.
+                    From regular upkeep to detailed cleaning, every service is customized around
+                    what your space needs.
+                </p>
+
+                <button class="gold-button" type="button" onclick="openForm()">
+                    Request a Free Estimate
+                </button>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <img src="nobleheaven.png.PNG"
+                     class="hero-logo"
+                     alt="Noble Heaven Cleaning Services">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="page-section services-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Our Services</h2>
+
+            <p class="section-subtitle">
+                Click any service to learn more about how we can help.
+            </p>
+
+            <div class="gold-line"></div>
+
+
+            <div class="accordion-grid">
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Routine Cleaning</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            Regular cleaning designed to help keep your home consistently fresh,
+                            comfortable, and well cared for. We focus on the everyday areas that
+                            make the biggest difference in your home's appearance and comfort.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Deep Cleaning</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            A more thorough, detailed clean for homes that need extra attention.
+                            We focus on buildup, overlooked areas, detailed surfaces, kitchens,
+                            bathrooms, baseboards, and more for a complete refresh.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Move-In / Move-Out Cleaning</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            Whether you're preparing to settle into a new home or leaving one behind,
+                            we provide detailed cleaning to help make the transition feel fresh,
+                            clean, and ready for its next chapter.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Recurring Cleaning</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            Keep your home consistently clean with a schedule that works for you.
+                            Weekly, biweekly, and customized recurring arrangements can be discussed
+                            based on your home's needs.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Carpet Cleaning</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            Help refresh your carpets and maintain a cleaner-feeling home with
+                            carpet cleaning tailored to the condition and needs of your space.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Organization Assistance</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            A helping hand for bringing more order to your everyday spaces.
+                            We can assist with organizing areas of your home so they feel more
+                            functional, manageable, and comfortable.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Kitchen Deep Care</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            Detailed attention for one of the most frequently used spaces in your
+                            home, including surfaces, cabinets, appliances, and other areas based
+                            on your requested service.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Bathroom Deep Care</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            A detailed cleaning focused on helping your bathrooms feel fresh,
+                            comfortable, and cared for, with attention given to sinks, toilets,
+                            tubs, showers, mirrors, and surrounding surfaces.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>One-Time Cleaning</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            Need a fresh start without committing to a recurring schedule?
+                            A one-time cleaning can be customized around your priorities and
+                            the specific needs of your home.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <button class="service-toggle" type="button">
+                        <span>Detail Cleaning Upon Request</span>
+                        <span class="service-symbol">+</span>
+                    </button>
+                    <div class="service-content">
+                        <div class="service-content-inner">
+                            Every home is different. Let us know if there are specific areas,
+                            tasks, or details you'd like us to focus on, and we'll discuss how
+                            we can tailor your cleaning service.
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHAT'S INCLUDED -->
+
+    <section class="page-section included-section">
+
+        <div class="container">
+
+            <h2 class="section-title">What's Included</h2>
+
+            <p class="section-subtitle">
+                Every cleaning is customized to your home's needs.
+            </p>
+
+            <div class="gold-line"></div>
+
+
+            <div class="included-grid">
+
+                <div class="included-column">
+                    <ul class="included-list">
+                        <li>Dusting all surfaces</li>
+                        <li>Vacuuming & mopping</li>
+                        <li>Kitchen cleaning</li>
+                        <li>Bathroom cleaning & sanitizing</li>
+                    </ul>
+                </div>
+
+                <div class="included-column">
+                    <ul class="included-list">
+                        <li>Interior window cleaning</li>
+                        <li>Baseboard cleaning</li>
+                        <li>Cabinet cleaning</li>
+                        <li>Trash removal</li>
+                    </ul>
+                </div>
+
+                <div class="included-column">
+                    <ul class="included-list">
+                        <li>Refrigerator cleaning</li>
+                        <li>Oven cleaning</li>
+                        <li>Mirrors & glass surfaces</li>
+                        <li>Detail cleaning upon request</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <p class="included-note">
+                Every home is different. Let us know what you need, and we'll create a cleaning
+                plan that works for your space and lifestyle.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- AREAS WE SERVE -->
+
+    <section class="page-section areas-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Areas We Serve</h2>
+
+            <div class="gold-line"></div>
+
+
+            <div class="areas-grid">
+
+                <div class="area-column">
+                    <h3 class="area-title">San Fernando Valley</h3>
+                    <p>
+                        Panorama City · Van Nuys · Northridge · Granada Hills · North Hills ·
+                        Woodland Hills · Sherman Oaks · Encino · Burbank and surrounding communities.
+                    </p>
+                </div>
+
+                <div class="area-column">
+                    <h3 class="area-title">Simi & Conejo Valley</h3>
+                    <p>
+                        Simi Valley · Moorpark · Thousand Oaks · Newbury Park ·
+                        Westlake Village · Oak Park · Agoura Hills and surrounding areas.
+                    </p>
+                </div>
+
+                <div class="area-column">
+                    <h3 class="area-title">And Surrounding Areas</h3>
+                    <p>
+                        Don't see your city? Contact us — we're happy to discuss your
+                        cleaning needs and travel availability.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <p class="travel-note">
+                Based in Panorama City, CA • Willing to travel up to approximately 40 miles for the right job.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <h2 class="cta-title">
+                Come Home to a Heavenly Clean
+            </h2>
+
+            <button class="gold-button" type="button" onclick="openForm()">
+                Request a Free Estimate
+            </button>
+
+
+            <div class="contact-wrap">
+
+                <button class="contact-toggle"
+                        id="contactToggle"
+                        type="button"
+                        onclick="toggleContact()">
+
+                    Contact Us
+                    <span class="contact-arrow">▼</span>
+
+                </button>
+
+
+                <div class="contact-dropdown" id="contactDropdown">
+
+                    <div class="contact-dropdown-inner">
+
+                        <a href="tel:4355651174" class="contact-item">
+                            <img src="phone.PNG" alt="Phone">
+                            <span>(435) 565-1174</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/nobleheaven.cleaningservices?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+                            <img src="instagram .PNG" alt="Instagram">
+                            <span>@Nobleheavencleaningservices</span>
+                        </a>
+
+                        <a href="https://www.facebook.com/profile.php?id=61590302324697&mibextid=wwXIfr"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+                            <img src="Facebook.PNG" alt="Facebook">
+                            <span>Noble Heaven Cleaning Services</span>
+                        </a>
+
+                        <a href="mailto:nobleheaven.cleaningservices@gmail.com"
+                           class="contact-item">
+                            <img src="email.PNG" alt="Email">
+                            <span>nobleheaven.cleaningservices@gmail.com</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ESTIMATE FORM -->
+
+    <div id="appointmentForm"
+         class="form-overlay"
+         onclick="closeForm()">
+
+        <div class="form-box"
+             onclick="event.stopPropagation()">
+
+            <h2>Request a Free Estimate</h2>
+
+            <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
+                  method="POST">
+
+                <input type="hidden"
+                       name="_subject"
+                       value="New Residential Cleaning Estimate Request - Noble Heaven">
+
+                <input type="hidden"
+                       name="_captcha"
+                       value="false">
+
+                <input type="hidden"
+                       name="_template"
+                       value="table">
+
+                <input type="text"
+                       name="name"
+                       placeholder="Name"
+                       required>
+
+                <input type="tel"
+                       name="phone"
+                       placeholder="Phone Number"
+                       required>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Email Address"
+                       required>
+
+                <textarea name="message"
+                          rows="5"
+                          placeholder="Tell us about your cleaning needs"></textarea>
+
+                <button type="submit">
+                    Submit Request
+                </button>
+
+                <button type="button"
+                        class="close"
+                        onclick="closeForm()">
+                    Close
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MENU -->
+
+    <div id="menuOverlay"
+         class="menu-overlay"
+         onclick="closeMenu()">
+
+        <div class="menu-box"
+             onclick="event.stopPropagation()">
+
+            <h2>NOBLE HEAVEN</h2>
+
+            <a href="index.html" class="menu-link">Home</a>
+
+            <a href="about-us.html" class="menu-link">About Us</a>
+
+            <a href="residential-cleaning.html" class="menu-link active">
+                Residential Cleaning
+            </a>
+
+            <a href="commercial-cleaning.html" class="menu-link">
+                Commercial Cleaning
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================
+           MENU
+        ========================= */
+
+        function openMenu() {
+            document.getElementById("menuOverlay").style.display = "block";
+            document.body.classList.add("menu-open");
+        }
+
+        function closeMenu() {
+            document.getElementById("menuOverlay").style.display = "none";
+            document.body.classList.remove("menu-open");
+        }
+
+
+        /* =========================
+           ESTIMATE FORM
+        ========================= */
+
+        function openForm() {
+            document.getElementById("appointmentForm").style.display = "flex";
+            document.body.classList.add("form-open");
+        }
+
+        function closeForm() {
+            document.getElementById("appointmentForm").style.display = "none";
+            document.body.classList.remove("form-open");
+        }
+
+
+        /* =========================
+           CONTACT DROPDOWN
+        ========================= */
+
+        function toggleContact() {
+            const dropdown = document.getElementById("contactDropdown");
+            const button = document.getElementById("contactToggle");
+
+            dropdown.classList.toggle("open");
+            button.classList.toggle("open");
+        }
+
+
+        /* =========================
+           SERVICE ACCORDION
+           Only one service opens at a time
+        ========================= */
+
+        const serviceCards = document.querySelectorAll(".service-card");
+
+        serviceCards.forEach(function(card) {
+
+            const button = card.querySelector(".service-toggle");
+            const content = card.querySelector(".service-content");
+            const symbol = card.querySelector(".service-symbol");
+
+            button.addEventListener("click", function() {
+
+                const isAlreadyOpen = card.classList.contains("active");
+
+                serviceCards.forEach(function(otherCard) {
+                    otherCard.classList.remove("active");
+
+                    const otherContent = otherCard.querySelector(".service-content");
+                    const otherSymbol = otherCard.querySelector(".service-symbol");
+
+                    otherContent.style.maxHeight = null;
+                    otherSymbol.textContent = "+";
+                });
+
+                if (!isAlreadyOpen) {
+                    card.classList.add("active");
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    symbol.textContent = "−";
+                }
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
