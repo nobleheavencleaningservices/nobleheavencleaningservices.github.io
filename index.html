@@ -324,7 +324,78 @@ body {
     text-decoration: underline;
 }
 
+/* ===== ESTIMATE FORM ===== */
 
+.form-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.form-box h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-top: 0;
+    color: #202020;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 15px;
+}
+
+.form-box textarea {
+    resize: vertical;
+}
+
+.form-box button[type="submit"] {
+    padding: 14px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #d8bf86, #b89655);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-box .close {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background: white;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+}
+  
 /* ===== MOBILE ===== */
 
 @media (max-width: 600px) {
@@ -680,6 +751,25 @@ function openForm() {
     document.getElementById("appointmentForm").style.display = "block";
 }
 
+<script>
+
+/* ===== MENU ===== */
+
+function openMenu() {
+    document.getElementById("menuOverlay").style.display = "block";
+}
+
+function closeMenu() {
+    document.getElementById("menuOverlay").style.display = "none";
+}
+
+
+/* ===== ESTIMATE FORM ===== */
+
+function openForm() {
+    document.getElementById("appointmentForm").style.display = "flex";
+}
+
 function closeForm() {
     document.getElementById("appointmentForm").style.display = "none";
 }
@@ -688,7 +778,6 @@ function closeForm() {
 /* ===== CONTACT DROPDOWN ===== */
 
 function toggleContact() {
-
     const dropdown = document.getElementById("contactDropdown");
     const button = document.getElementById("contactToggle");
 
