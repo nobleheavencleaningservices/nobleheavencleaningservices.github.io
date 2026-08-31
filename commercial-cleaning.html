@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Professional commercial cleaning services for offices, retail spaces, property managers, and businesses throughout San Fernando Valley and Los Angeles.">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+
+/* ===== GLOBAL ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: url("background.JPG.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: #202020;
+}
+
+
+/* ===== HAMBURGER ===== */
+
+.hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    cursor: pointer;
+    z-index: 2000;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    user-select: none;
+}
+
+
+/* ===== PAGE ===== */
+
+.page {
+    width: 100%;
+    padding: 35px 20px 80px;
+}
+
+
+.content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ===== HERO ===== */
+
+.logo {
+    width: 180px;
+    display: block;
+    margin: 0 auto 35px;
+}
+
+
+.hero-label {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 28px;
+}
+
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(62px, 9vw, 96px);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+.hero-subtitle {
+    max-width: 600px;
+    margin: 30px auto 70px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* ===== SECTION ===== */
+
+.section {
+    margin-top: 70px;
+}
+
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+
+.section-intro {
+    max-width: 620px;
+    margin: 0 auto 35px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* ===== SERVICES ===== */
+
+.services {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.service {
+    width: 100%;
+}
+
+
+.service-button {
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid rgba(184,150,85,0.45);
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+
+.service-button:hover {
+    background: rgba(255,255,255,0.65);
+}
+
+
+.service-arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+
+.service-button.open .service-arrow {
+    transform: rotate(180deg);
+}
+
+
+.service-description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        padding 0.3s ease;
+}
+
+
+.service-description.open {
+    max-height: 250px;
+    opacity: 1;
+    padding: 18px 25px 8px;
+}
+
+
+.service-description p {
+    margin: 0;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+
+/* ===== CUSTOM SECTION ===== */
+
+.custom-section {
+    max-width: 720px;
+    margin: 100px auto 0;
+    padding: 55px 30px;
+    background: rgba(255,255,255,0.25);
+    border: 1px solid rgba(184,150,85,0.25);
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+}
+
+
+.custom-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+
+.custom-section > p {
+    max-width: 580px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+.business-points {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+
+.business-point {
+    max-width: 180px;
+}
+
+
+.business-point h3 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+
+.business-point p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* ===== BUTTONS ===== */
+
+.cta-section {
+    margin-top: 80px;
+}
+
+
+.cta-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+
+.cta-section p {
+    color: #555;
+    margin: 0 auto 25px;
+    font-size: 16px;
+}
+
+
+.appointment-btn {
+    display: inline-block;
+    padding: 17px 50px;
+    background: linear-gradient(180deg, #d8bf86, #b89655);
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+
+.appointment-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ===== CONTACT ===== */
+
+.contact-section {
+    margin-top: 22px;
+}
+
+
+.contact-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: rgba(255,255,255,0.45);
+    border: 1px solid rgba(184,150,85,0.45);
+    color: #333;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 999px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+}
+
+
+.contact-arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+
+.contact-toggle.open .contact-arrow {
+    transform: rotate(180deg);
+}
+
+
+.contact-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s ease, opacity 0.35s ease;
+    width: 100%;
+}
+
+
+.contact-dropdown.open {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 8px;
+}
+
+
+.contact-dropdown-inner {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(8px);
+}
+
+
+.contact-item:hover {
+    background: rgba(255,255,255,0.7);
+}
+
+
+.contact-item img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* ===== FORM ===== */
+
+.form-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.form-box {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+
+.form-box h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-top: 0;
+    color: #202020;
+}
+
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 15px;
+}
+
+
+.form-box textarea {
+    resize: vertical;
+}
+
+
+.form-box button[type="submit"] {
+    padding: 14px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #d8bf86, #b89655);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.form-box .close {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background: white;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* ===== MENU ===== */
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    z-index: 1500;
+}
+
+
+.menu-box {
+    width: 92%;
+    max-width: 450px;
+    margin: 60px auto;
+    background: rgba(30,30,30,0.88);
+    color: white;
+    border-radius: 22px;
+    padding: 45px 30px;
+    text-align: center;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+
+.menu-box h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+.menu-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+
+.menu-link:hover {
+    transform: translateX(4px);
+    color: #d8bf86;
+}
+
+
+.menu-link.active {
+    text-decoration: underline;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .hamburger {
+        width: 55px;
+        height: 55px;
+        font-size: 42px;
+    }
+
+
+    .page {
+        padding: 25px 16px 60px;
+    }
+
+
+    .logo {
+        width: 135px;
+        margin-bottom: 28px;
+    }
+
+
+    .hero-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 22px;
+    }
+
+
+    .hero-title {
+        font-size: 58px;
+    }
+
+
+    .hero-subtitle {
+        font-size: 15px;
+        margin: 25px auto 55px;
+        line-height: 1.7;
+    }
+
+
+    .section {
+        margin-top: 55px;
+    }
+
+
+    .section-title {
+        font-size: 38px;
+    }
+
+
+    .section-intro {
+        font-size: 14px;
+        margin-bottom: 28px;
+    }
+
+
+    .service-button {
+        padding: 17px 18px;
+        font-size: 14px;
+    }
+
+
+    .service-description.open {
+        padding: 15px 18px 6px;
+    }
+
+
+    .service-description p {
+        font-size: 14px;
+    }
+
+
+    .custom-section {
+        margin-top: 70px;
+        padding: 40px 20px;
+    }
+
+
+    .custom-section h2 {
+        font-size: 38px;
+    }
+
+
+    .business-points {
+        gap: 25px;
+    }
+
+
+    .cta-section {
+        margin-top: 60px;
+    }
+
+
+    .cta-section h2 {
+        font-size: 36px;
+    }
+
+
+    .appointment-btn {
+        padding: 15px 28px;
+        font-size: 14px;
+    }
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HAMBURGER -->
+
+<div class="hamburger" onclick="openMenu()">☰</div>
+
+
+
+<!-- PAGE -->
+
+<div class="page">
+
+    <div class="content">
+
+
+        <!-- HERO -->
+
+        <img src="nobleheaven.png.PNG"
+             class="logo"
+             alt="Noble Heaven Cleaning Services">
+
+
+        <div class="hero-label">
+
+            Professional • Reliable • Detailed
+
+        </div>
+
+
+        <h1 class="hero-title">
+
+            Commercial<br>
+            Cleaning
+
+        </h1>
+
+
+        <p class="hero-subtitle">
+
+            Reliable and detailed cleaning solutions designed for businesses,
+            professional spaces, and commercial properties.
+
+        </p>
+
+
+
+        <!-- SERVICES -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+
+                Our Commercial Services
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Flexible cleaning services tailored to the needs of your
+                business, property, and schedule.
+
+            </p>
+
+
+            <div class="services">
+
+
+                <!-- OFFICE CLEANING -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Office Cleaning
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Detailed cleaning for offices and workspaces,
+                            including desks, common areas, break rooms,
+                            restrooms, floors, dusting, trash removal,
+                            and other frequently used spaces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RETAIL -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Retail & Store Cleaning
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Keep customer-facing spaces clean, welcoming,
+                            and presentable with detailed cleaning of floors,
+                            surfaces, fitting areas, restrooms, counters,
+                            and common spaces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JANITORIAL -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Janitorial Services
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Reliable ongoing cleaning for businesses that need
+                            regular maintenance. Services can be customized
+                            around your property's specific needs and schedule.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROPERTY MANAGEMENT -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Property Management Cleaning
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Cleaning support for property managers, rental
+                            properties, common areas, vacant units, and spaces
+                            that need to be prepared for tenants or visitors.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MOVE IN OUT -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Move-In & Move-Out Cleaning
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Detailed cleaning for commercial spaces during
+                            tenant transitions, relocations, or before a new
+                            business moves into the property.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- POST CONSTRUCTION -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Post-Construction Cleaning
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Detailed cleaning after renovations or construction,
+                            including dust removal, surface cleaning, floors,
+                            windows, and preparing the space for use.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROFESSIONAL OFFICES -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Professional Office Cleaning
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Cleaning services for professional environments
+                            such as studios, agencies, administrative offices,
+                            waiting areas, meeting rooms, and shared workspaces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COMMON AREAS -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Common Area Cleaning
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Cleaning for shared spaces including lobbies,
+                            hallways, stairways, elevators, entryways,
+                            restrooms, and other high-traffic areas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECURRING -->
+
+                <div class="service">
+
+                    <button class="service-button"
+                            onclick="toggleService(this)">
+
+                        Recurring Cleaning Services
+
+                        <span class="service-arrow">▼</span>
+
+                    </button>
+
+
+                    <div class="service-description">
+
+                        <p>
+                            Flexible recurring cleaning schedules including
+                            daily, weekly, biweekly, or customized service
+                            plans based on your business needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CUSTOMIZED SECTION -->
+
+        <section class="custom-section">
+
+            <h2>
+
+                Customized for Your Business
+
+            </h2>
+
+
+            <p>
+
+                Every business has different cleaning needs. We work with you
+                to create a flexible cleaning plan based on your space,
+                priorities, and preferred schedule.
+
+            </p>
+
+
+            <div class="business-points">
+
+
+                <div class="business-point">
+
+                    <h3>Flexible Scheduling</h3>
+
+                    <p>
+                        Service designed around your business hours.
+                    </p>
+
+                </div>
+
+
+                <div class="business-point">
+
+                    <h3>Customized Plans</h3>
+
+                    <p>
+                        Cleaning tailored to your specific space.
+                    </p>
+
+                </div>
+
+
+                <div class="business-point">
+
+                    <h3>Reliable Service</h3>
+
+                    <p>
+                        Consistent attention to detail with every visit.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CTA -->
+
+        <section class="cta-section">
+
+            <h2>
+
+                Let's Keep Your Business Clean
+
+            </h2>
+
+
+            <p>
+
+                Tell us about your space and we'll help create a cleaning plan
+                that works for you.
+
+            </p>
+
+
+            <button class="appointment-btn"
+                    onclick="openForm()">
+
+                Request a Free Estimate
+
+            </button>
+
+
+            <!-- CONTACT -->
+
+            <div class="contact-section">
+
+
+                <button class="contact-toggle"
+                        id="contactToggle"
+                        onclick="toggleContact()">
+
+                    Contact Us
+
+                    <span class="contact-arrow">▼</span>
+
+                </button>
+
+
+                <div class="contact-dropdown"
+                     id="contactDropdown">
+
+
+                    <div class="contact-dropdown-inner">
+
+
+                        <a href="tel:4355651174"
+                           class="contact-item">
+
+                            <img src="phone.PNG"
+                                 alt="Phone">
+
+                            <span>
+                                (435) 565-1174
+                            </span>
+
+                        </a>
+
+
+
+                        <a href="https://www.instagram.com/nobleheaven.cleaningservices?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+
+                            <img src="instagram .PNG"
+                                 alt="Instagram">
+
+                            <span>
+                                @Nobleheavencleaningservices
+                            </span>
+
+                        </a>
+
+
+
+                        <a href="https://www.facebook.com/profile.php?id=61590302324697&mibextid=wwXIfr"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+
+                            <img src="Facebook.PNG"
+                                 alt="Facebook">
+
+                            <span>
+                                Noble Heaven Cleaning Services
+                            </span>
+
+                        </a>
+
+
+
+                        <a href="mailto:nobleheaven.cleaningservices@gmail.com"
+                           class="contact-item">
+
+                            <img src="email.PNG"
+                                 alt="Email">
+
+                            <span>
+                                nobleheaven.cleaningservices@gmail.com
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ESTIMATE FORM -->
+
+<div id="appointmentForm"
+     class="form-overlay"
+     onclick="closeForm()">
+
+
+    <div class="form-box"
+         onclick="event.stopPropagation()">
+
+
+        <h2>
+
+            Request a Free Estimate
+
+        </h2>
+
+
+        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
+              method="POST">
+
+
+            <input type="hidden"
+                   name="_subject"
+                   value="New Commercial Cleaning Estimate Request - Noble Heaven">
+
+
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
+
+
+            <input type="hidden"
+                   name="_template"
+                   value="table">
+
+
+            <input type="text"
+                   name="name"
+                   placeholder="Name"
+                   required>
+
+
+            <input type="text"
+                   name="business"
+                   placeholder="Business Name">
+
+
+            <input type="tel"
+                   name="phone"
+                   placeholder="Phone Number"
+                   required>
+
+
+            <input type="email"
+                   name="email"
+                   placeholder="Email Address"
+                   required>
+
+
+            <textarea name="message"
+                      rows="4"
+                      placeholder="Tell us about your business and cleaning needs"></textarea>
+
+
+            <button type="submit">
+
+                Submit
+
+            </button>
+
+
+            <button type="button"
+                    class="close"
+                    onclick="closeForm()">
+
+                Close
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- MENU -->
+
+<div id="menuOverlay"
+     class="menu-overlay"
+     onclick="closeMenu()">
+
+
+    <div class="menu-box"
+         onclick="event.stopPropagation()">
+
+
+        <h2>NOBLE HEAVEN</h2>
+
+
+        <a href="/"
+           class="menu-link">
+
+            Home
+
+        </a>
+
+
+        <a href="about.html"
+           class="menu-link">
+
+            About us
+
+        </a>
+
+
+        <a href="residential-cleaning.html"
+           class="menu-link">
+
+            Residential Cleaning
+
+        </a>
+
+
+        <a href="commercial-cleaning.html"
+           class="menu-link active">
+
+            Commercial Cleaning
+
+        </a>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+
+/* ===== MENU ===== */
+
+function openMenu() {
+
+    document.getElementById("menuOverlay").style.display = "block";
+
+}
+
+
+function closeMenu() {
+
+    document.getElementById("menuOverlay").style.display = "none";
+
+}
+
+
+/* ===== ESTIMATE FORM ===== */
+
+function openForm() {
+
+    document.getElementById("appointmentForm").style.display = "flex";
+
+}
+
+
+function closeForm() {
+
+    document.getElementById("appointmentForm").style.display = "none";
+
+}
+
+
+/* ===== CONTACT ===== */
+
+function toggleContact() {
+
+    const dropdown = document.getElementById("contactDropdown");
+
+    const button = document.getElementById("contactToggle");
+
+
+    dropdown.classList.toggle("open");
+
+    button.classList.toggle("open");
+
+}
+
+
+/* ===== SERVICES ===== */
+
+function toggleService(button) {
+
+    const description = button.nextElementSibling;
+
+    button.classList.toggle("open");
+
+    description.classList.toggle("open");
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
