@@ -550,16 +550,18 @@
             gap: 14px;
         }
 
-        .form-box input,
-        .form-box textarea {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background: white;
-            font-family: 'Inter', Arial, sans-serif;
-            font-size: 14px;
-        }
+       .form-box input,
+.form-box textarea,
+.form-box select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 15px;
+    background: white;
+    color: #333;
+}
 
         .form-box textarea {
             resize: vertical;
@@ -1164,66 +1166,173 @@
     </section>
 
 
-    <!-- ESTIMATE FORM -->
+   <!-- RESIDENTIAL ESTIMATE FORM -->
 
-    <div id="appointmentForm"
-         class="form-overlay"
-         onclick="closeForm()">
+<div id="appointmentForm"
+     class="form-overlay"
+     onclick="closeForm()">
 
-        <div class="form-box"
-             onclick="event.stopPropagation()">
+    <div class="form-box"
+         onclick="event.stopPropagation()">
 
-            <h2>Request a Free Estimate</h2>
+        <h2>Request a Free Estimate</h2>
 
-            <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
-                  method="POST">
+        <p class="form-intro">
+            Tell us a little about your home and cleaning needs.
+            We'll get back to you with a personalized estimate.
+        </p>
 
-                <input type="hidden"
-                       name="_subject"
-                       value="New Residential Cleaning Estimate Request - Noble Heaven">
+        <form action="https://formsubmit.co/nobleheaven.cleaningservices@gmail.com"
+              method="POST">
 
-                <input type="hidden"
-                       name="_captcha"
-                       value="false">
+            <!-- Email subject -->
+            <input type="hidden"
+                   name="_subject"
+                   value="New Residential Cleaning Estimate Request - Noble Heaven">
 
-                <input type="hidden"
-                       name="_template"
-                       value="table">
+            <!-- Disable FormSubmit captcha -->
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
 
-                <input type="text"
-                       name="name"
-                       placeholder="Name"
-                       required>
+            <!-- Cleaner email format -->
+            <input type="hidden"
+                   name="_template"
+                   value="table">
 
-                <input type="tel"
-                       name="phone"
-                       placeholder="Phone Number"
-                       required>
 
-                <input type="email"
-                       name="email"
-                       placeholder="Email Address"
-                       required>
+            <!-- NAME -->
 
-                <textarea name="message"
-                          rows="5"
-                          placeholder="Tell us about your cleaning needs"></textarea>
+            <input type="text"
+                   name="name"
+                   placeholder="Your Name"
+                   required>
 
-                <button type="submit">
-                    Submit Request
-                </button>
 
-                <button type="button"
-                        class="close"
-                        onclick="closeForm()">
-                    Close
-                </button>
+            <!-- PHONE -->
 
-            </form>
+            <input type="tel"
+                   name="phone"
+                   placeholder="Phone Number"
+                   required>
 
-        </div>
+
+            <!-- EMAIL -->
+
+            <input type="email"
+                   name="email"
+                   placeholder="Email Address"
+                   required>
+
+
+            <!-- TYPE OF CLEANING -->
+
+            <select name="cleaning_type" required>
+
+                <option value="" disabled selected>
+                    What type of cleaning do you need?
+                </option>
+
+                <option>Standard / Regular Cleaning</option>
+                <option>Deep Cleaning</option>
+                <option>Move-In Cleaning</option>
+                <option>Move-Out Cleaning</option>
+                <option>Post-Construction Cleaning</option>
+                <option>Airbnb / Vacation Rental Cleaning</option>
+                <option>Carpet Cleaning</option>
+                <option>Organization / Decluttering Assistance</option>
+                <option>Not Sure Yet</option>
+
+            </select>
+
+
+            <!-- HOME SIZE -->
+
+            <select name="home_size" required>
+
+                <option value="" disabled selected>
+                    How many bedrooms?
+                </option>
+
+                <option>Studio</option>
+                <option>1 Bedroom</option>
+                <option>2 Bedrooms</option>
+                <option>3 Bedrooms</option>
+                <option>4 Bedrooms</option>
+                <option>5+ Bedrooms</option>
+                <option>Not Sure</option>
+
+            </select>
+
+
+            <!-- CLEANING FREQUENCY -->
+
+            <select name="cleaning_frequency" required>
+
+                <option value="" disabled selected>
+                    How often do you need cleaning?
+                </option>
+
+                <option>One-Time Cleaning</option>
+                <option>Weekly</option>
+                <option>Every 2 Weeks</option>
+                <option>Monthly</option>
+                <option>Occasionally / As Needed</option>
+                <option>Not Sure Yet</option>
+
+            </select>
+
+
+            <!-- PREFERRED CONTACT METHOD -->
+
+            <select name="preferred_contact">
+
+                <option value="" disabled selected selected>
+                    Preferred Contact Method (Optional)
+                </option>
+
+                <option>Call</option>
+                <option>Text</option>
+                <option>Email</option>
+                <option>No Preference</option>
+
+            </select>
+
+
+            <!-- ADDITIONAL DETAILS -->
+
+            <textarea name="message"
+                      rows="4"
+                      placeholder="Tell us more about your cleaning needs or any specific areas you'd like us to focus on..."></textarea>
+
+
+            <!-- SUBMIT -->
+
+            <button type="submit">
+                Request My Estimate
+            </button>
+
+
+            <!-- CLOSE -->
+
+            <button type="button"
+                    class="close"
+                    onclick="closeForm()">
+
+                Close
+
+            </button>
+
+        </form>
+
+
+        <p class="form-note">
+            No obligation • Personalized estimate
+        </p>
 
     </div>
+
+</div>
 <!-- MENU -->
 
 <div id="menuOverlay"
